@@ -31,3 +31,5 @@ res://scenes/UI/Conversation_start.tscn
 res://scenes/UI/Conversation_start.gd
 res://scenes/UI/names.tscn
 res://scenes/ENDing/end_2.tscn
+res://scenes/dialogue/balloon.tscn
+res://scenes/ENDing/end_1.tscn

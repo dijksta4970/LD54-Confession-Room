@@ -1,9 +1,9 @@
 [gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
 
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_asedo"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_ik5o6"]
 
 [resource]
-script = ExtResource("1_asedo")
+script = ExtResource("1_ik5o6")
 titles = {
 "start": "3"
 }
@@ -210,9 +210,9 @@ lines = {
 }])
 },
 "id": "25",
-"next_conditional_id": "32",
+"next_conditional_id": "33",
 "next_id": "26",
-"next_id_after": "32",
+"next_id_after": "33",
 "type": "condition"
 },
 "26": {
@@ -229,10 +229,10 @@ lines = {
 },
 "27": {
 "id": "27",
-"next_id": "32",
-"next_id_after": "32",
+"next_id": "28",
+"next_id_after": "33",
 "parent_id": "25",
-"responses": PackedStringArray("27", "28"),
+"responses": PackedStringArray("27", "29"),
 "tags": PackedStringArray(),
 "text": "Okay, let me help you.",
 "text_replacements": Array[Dictionary]([]),
@@ -241,32 +241,30 @@ lines = {
 },
 "28": {
 "id": "28",
-"next_id": "29",
-"next_id_after": "32",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "emit",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "_start_girl"
+}])])
+}])
+},
+"next_id": "33",
+"parent_id": "27",
+"type": "mutation"
+},
+"29": {
+"id": "29",
+"next_id": "30",
+"next_id_after": "33",
 "parent_id": "25",
 "tags": PackedStringArray(),
 "text": "The confessional is not open to minors.",
 "text_replacements": Array[Dictionary]([]),
 "translation_key": "The confessional is not open to minors.",
 "type": "response"
-},
-"29": {
-"id": "29",
-"mutation": {
-"expression": Array[Dictionary]([{
-"type": "variable",
-"value": "value"
-}, {
-"type": "assignment",
-"value": "-="
-}, {
-"type": "number",
-"value": 1
-}])
-},
-"next_id": "30",
-"parent_id": "28",
-"type": "mutation"
 },
 "3": {
 "condition": {
@@ -293,6 +291,24 @@ lines = {
 "id": "30",
 "mutation": {
 "expression": Array[Dictionary]([{
+"type": "variable",
+"value": "value"
+}, {
+"type": "assignment",
+"value": "-="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "31",
+"parent_id": "29",
+"type": "mutation"
+},
+"31": {
+"id": "31",
+"mutation": {
+"expression": Array[Dictionary]([{
 "function": "emit",
 "type": "function",
 "value": Array[Array]([Array[Dictionary]([{
@@ -304,12 +320,12 @@ lines = {
 }])])
 }])
 },
-"next_id": "32",
-"parent_id": "28",
+"next_id": "33",
+"parent_id": "29",
 "type": "mutation"
 },
-"32": {
-"id": "32",
+"33": {
+"id": "33",
 "is_snippet": false,
 "next_id": "end",
 "type": "goto"

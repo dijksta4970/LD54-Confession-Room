@@ -45,3 +45,6 @@ grow_vertical = 0
 theme = SubResource("Theme_lm537")
 text = "Tap the Bible
 to start your listening..."
+
+[connection signal="mouse_entered" from="TapHereToStart" to="." method="_on_tap_here_to_start_mouse_entered"]
+[connection signal="mouse_exited" from="TapHereToStart" to="." method="_on_tap_here_to_start_mouse_exited"]

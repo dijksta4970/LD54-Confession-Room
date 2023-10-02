@@ -1,15 +1,16 @@
-[gd_scene load_steps=8 format=3 uid="uid://b1g863qancdxy"]
+[gd_scene load_steps=9 format=3 uid="uid://b1g863qancdxy"]
 
 [ext_resource type="Script" path="res://scenes/ENDing/end_1.gd" id="1_chrcm"]
 [ext_resource type="Texture2D" uid="uid://706qy1gkpgul" path="res://assets/night.png" id="2_21fet"]
-[ext_resource type="FontFile" uid="uid://ymj2krtbfxbp" path="res://assets/fonts/PixelifySans-Regular.ttf" id="3_5b1bl"]
+[ext_resource type="FontFile" uid="uid://db3f4f1t12er3" path="res://assets/fonts/nokiafc22.ttf" id="3_jxlfo"]
 [ext_resource type="Texture2D" uid="uid://b24x513xjsr5a" path="res://assets/back.png" id="4_1cabk"]
 [ext_resource type="PackedScene" uid="uid://ccsod1wsokn2l" path="res://scenes/helper/transition.tscn" id="5_ntj8i"]
+[ext_resource type="AudioStream" uid="uid://dq213xx7u7fvc" path="res://assets/sound/biu.wav" id="5_wudal"]
 
 [sub_resource type="Theme" id="Theme_6fm63"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_6xrxd"]
-font = ExtResource("3_5b1bl")
+font = ExtResource("3_jxlfo")
 font_size = 18
 shadow_size = 3
 
@@ -51,6 +52,9 @@ offset_bottom = 25.0
 scale = Vector2(1.5, 1.5)
 icon = ExtResource("4_1cabk")
 flat = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="Button"]
+stream = ExtResource("5_wudal")
 
 [node name="transition" parent="." instance=ExtResource("5_ntj8i")]
 

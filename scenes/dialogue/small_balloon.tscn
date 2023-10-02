@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://13s5spsk34qu"]
 
 [ext_resource type="Script" path="res://scenes/dialogue/balloon.gd" id="1_s2gbs"]
-[ext_resource type="FontFile" uid="uid://f56g5he3k48p" path="res://assets/fonts/PixelifySans-SemiBold.ttf" id="2_ageuc"]
+[ext_resource type="FontFile" uid="uid://db3f4f1t12er3" path="res://assets/fonts/nokiafc22.ttf" id="2_eajkf"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="2_hfvdi"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="3_1j1j0"]
 
@@ -54,8 +54,8 @@ corner_radius_bottom_right = 3
 corner_radius_bottom_left = 3
 
 [sub_resource type="Theme" id="Theme_qq3yp"]
-default_font = ExtResource("2_ageuc")
-default_font_size = 14
+default_font = ExtResource("2_eajkf")
+default_font_size = 12
 MarginContainer/constants/margin_bottom = 5
 MarginContainer/constants/margin_left = 10
 MarginContainer/constants/margin_right = 10
