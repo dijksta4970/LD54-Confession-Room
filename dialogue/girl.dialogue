@@ -25,6 +25,7 @@ if met_girl_out == false:
 if met_girl_out == true:
 	Young Girl: Please...
 	- Okay, let me help you.
+		do emit("_start_girl")
 	- The confessional is not open to minors.
 		set value -= 1
 		do emit("value_changed", value)
