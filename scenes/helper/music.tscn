@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://coi3u8jv1syhn"]
+
+[ext_resource type="Script" path="res://scenes/helper/music.gd" id="1_g16tr"]
+
+[node name="Music" type="Node"]
+script = ExtResource("1_g16tr")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -25.663
+autoplay = true

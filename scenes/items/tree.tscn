@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://bp3vf2sggiet"]
+
+[ext_resource type="Script" path="res://scenes/items/tree.gd" id="1_m1ufl"]
+[ext_resource type="Texture2D" uid="uid://cbi4gutywm4f3" path="res://assets/tree_down.png" id="1_not1q"]
+[ext_resource type="Texture2D" uid="uid://cag2l0avkvs8r" path="res://assets/tree.png" id="2_g6obn"]
+[ext_resource type="AudioStream" uid="uid://d247pkn2mvrr0" path="res://assets/sound/dengdeng.wav" id="4_kuvt4"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ka7vr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_not1q")
+}],
+"loop": true,
+"name": &"down",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_g6obn")
+}],
+"loop": true,
+"name": &"up",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8pk6u"]
+radius = 7.07107
+
+[node name="tree" type="Area2D"]
+script = ExtResource("1_m1ufl")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ka7vr")
+animation = &"down"
+autoplay = "down"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_8pk6u")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_kuvt4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

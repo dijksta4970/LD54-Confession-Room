@@ -1,0 +1,52 @@
+~ start
+
+	
+if met_granny_out == false:
+	Me: [[Hi|Hello]], [wait=1]Good to see you again. Have you come here to say a prayer as well?
+	set met_granny_out = true
+	Elder Lady: [[Hello|Morning|Good Morning]], No, I want to talk to you in the confessional today.
+	- Sure, please come with me.
+		do emit("_start_granny")
+		=> END
+	- The confessional? I don't think you will have anything to be sorry for.
+		The old lady chuckled quietly.
+		Elder Lady: Would you care to listen to my lengthy tale?
+		- Sure, please come with me.
+			do emit("_start_granny")
+			=> END
+		- I apologise for not being able to help you.
+			=> END
+	- Sorry, not available at the moment.
+		set value -= 1
+		do emit("value_changed", value)
+		=> END
+
+if met_granny_out == true:
+	if finish_granny == 1:
+		=> fg_1
+	if finish_granny == 2:
+		=> fg_2
+	if finish_granny == 0:
+		Elder Lady: It's wonderful to see you again. Has Mr. Bishop had a change of heart? Would you like to talk with me?
+		- Sure, please come with me.
+			do emit("_start_granny")
+		- I apologise for not being able to help you.
+		=> END
+
+
+~ fg_1
+Elder Lady: ......
+Me: Just don't bring trouble upon myself.
+=> END
+
+~ fg_2
+Elder Lady: Bless you, Your Grace!
+Elder Lady: I feel so grateful to you..
+Elder Lady: Once I'm reunited with my sister, I shall return the favor.
+Elder Lady: Wishing you all the best of luck. Amen!
+=> END
+
+
+	
+
+

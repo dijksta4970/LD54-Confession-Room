@@ -1,0 +1,86 @@
+~ start
+
+Elder Lady: It is simpler to express oneself in a comforting space like this. 
+Me: Of course. Without any judgement, I'm here just to lend an ear and support you. 
+Elder Lady: For most of my life, I had been part of a small community south of the city. My parents and sister were my entire world. 
+Elder Lady: The village was quiet and the air had a fresh piney scent. Tiny birds hopped along the dirt thoroughfares and snow-flecked chickens pecked at the ground for seeds and berries. 
+Elder Lady: But I prefer cities where everything is in a flurry of activity--where the pace quickens and people are constantly bustling around.
+Elder Lady: Sadly, we couldn't afford to move to the city. 
+Elder Lady: Days went by, and I watched the road leaving the village, dreaming the citylifes, and wondering about my sister. She had turned eighteen and had reached the age to marry. 
+Elder Lady: I wondered who would be her man. The blacksmith's son? The baker's son? Or perhaps the hunter?
+Elder Lady: It was truly astounding when my beloved sister received a letter from her cherished pen pal. 
+Elder Lady: It wasn't just an ordinary letter, for in it, he asked for her hand in marriage, inviting her to come to the bustling city to join him and start a life together.
+Elder Lady: My sister was a bundle of nerves and excitement when I suggested that we go to the city for that extended visit. 
+Elder Lady: On one hand, she was thrilled at the prospect of leaving our home in the village, but on the other hand, she was terrified to leave her parents behind. 
+Elder Lady: Her pen pal had invited her multiple times, yet she still refused every time. In my eyes, fear seemed to be stopping her from accepting the invitation.
+
+- Maybe she didn't want to abandon your elderly parents? 
+	Elder Lady: I didn't want to believe that she actually preferred life in the village. 
+	Elder Lady: On the one hand, it was a simple and quiet existence, but on the other hand, it meant she had given up that great, wonderful chance to have happiness in the city.
+- ......
+	Elder Lady: Maybe she had been bound to this village by the responsibility of our aging parents.
+	
+Elder Lady: But I had to seize this opportunity, regardless of whether it should have been my sister's, no matter the cost. Anyone shouldn't pass up the chance to go to the city. 
+- Did you mean you took your sister's place?
+	Elder Lady: Your insight is uncanny, your grace. 
+	Elder Lady: Yes, I grasped that proposal letter in my hand and marched all the way here to this city, determined to make a new life for myself.
+	- So... did you mean you steal the letter?
+		=> granny_3_1
+	- Did you really steal your sister's life with no remorse, no regret? 
+		=> granny_3_1
+		
+- Anyone?
+	Elder Lady: Her pen pal actually didn’t know what she looked like. With that proposal letter in hand, anyone could impersonate her. 
+	Elder Lady: I knew it was risky, but I couldn’t turn down this opportunity.[shake rate=5 level=5]So why not me[/shake]?
+	- You mean you stole it
+		=> granny_3_1
+	- So you brought that letter here?
+		Elder Lady: Yes.
+		=> granny_3_2
+
+
+~ granny_3_1
+Elder Lady: I know you'd pick up on what I was saying, but I didn't expect you to use a word as [shake rate=20 level=10]stole[/shake].. such an accusation.
+- The Almighty won't forgive such theft
+	Elder Lady: OH No... 
+	Elder Lady: It appears the Lord no longer grants me an audience; I have nothing left to say.
+	Me: This is what you deserve, you outright thief!
+	Elder Lady: ...[wait=1][shake rate=5 level=5]If the Lord can never absolve this sin, how can I ever be forgiven?[/shake]...
+	set value -= 1
+	do emit("value_changed", value)
+	The elderly lady slowly stands up. 
+	The door swings open, and she walks out. The sound is solid and resonant. You know she has left because the sounds change from normal to empty.
+	set finish_granny = 1
+	do emit("_finish_granny", finish_granny)
+	=> END
+
+	
+- No, I apologize for my rash words
+	Me: I'm here and ready to listen. Please take your time and tell me everything.
+	Elder Lady: Thank you.
+	=> granny_3_2
+
+~ granny_3_2
+Elder Lady: After I left the village for the city, I changed my ways to emulate my sister. I married the man she was supposed to marry. 
+Elder Lady: City life was unlike anything I had ever known before. Despite our family being built on [shake rate=20 level=10]a sinful lie[/shake], we found contentment in all that life had to offer. 
+Elder Lady: Yet, deep down, I'm haunted by guilt over abandoning my own family and deceiving my husband from long ago.
+Elder Lady: How could I have been so selfish? How could I have forgotten about her? 
+Elder Lady: Have her past years been filled with joy and bliss, while I [shake rate=20 level=10]stole[/shake] her life-changing chance...
+- Maybe you can start by writing her a letter
+Me: Maybe you can start by writing her a letter, to attempt to reconnect with her. 
+Me: I know it's been difficult, but expressing your thoughts and feelings could be a great way to rebuild the relationship you both used to have.
+Elder Lady: It's been a long time since I last heard from her, and I can't be sure if she's still there.
+- It's always worth a try
+	Elder Lady: I can't deny that I should write a letter to her, yet it's not easy for me. 
+	Elder Lady: Your grace, I'm grateful for your advice, but I'm afraid I won't be able to put my feelings on paper.
+	Elder Lady: ...But, still appreciate you. Amen.
+	=> END
+- Let me offer a helping hand to find your sister
+	Me: I can contact with the Bishop of the parish situated in the village, who can guide us towards more information. 
+	Me: Don't worry; we'll figure this out together.
+	Elder Lady: That would be wonderful. Thank you, your grace! Amen.
+	set value += 1
+	do emit("value_changed", value)
+	set finish_granny = 2
+	do emit("_finish_granny", finish_granny)
+	=> END

@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://b1coykog6nxcs"]
+
+[ext_resource type="Script" path="res://scenes/outdoor.gd" id="1_t7mqj"]
+[ext_resource type="PackedScene" uid="uid://dtrgqgt1d44kf" path="res://scenes/outdoorTileMap.tscn" id="2_g7d2d"]
+[ext_resource type="PackedScene" uid="uid://c7ydydyhvrwpp" path="res://scenes/to_in_door.tscn" id="3_r8632"]
+[ext_resource type="PackedScene" uid="uid://c6t5itkssa7vl" path="res://scenes/player.tscn" id="4_f2xfl"]
+[ext_resource type="PackedScene" uid="uid://c2gagopvbjxq0" path="res://scenes/outdoor_candle.tscn" id="4_j2rgy"]
+[ext_resource type="PackedScene" uid="uid://bp3vf2sggiet" path="res://scenes/tree.tscn" id="5_hwvh7"]
+
+[node name="Outdoor" type="Node2D"]
+script = ExtResource("1_t7mqj")
+
+[node name="Outdoor" parent="." instance=ExtResource("2_g7d2d")]
+
+[node name="ToInDoor" parent="." instance=ExtResource("3_r8632")]
+position = Vector2(674, 240)
+
+[node name="OutdoorCandle" parent="." instance=ExtResource("4_j2rgy")]
+position = Vector2(128, 244)
+scale = Vector2(3, 3)
+
+[node name="OutdoorCandle2" parent="." instance=ExtResource("4_j2rgy")]
+position = Vector2(545, 244)
+scale = Vector2(3, 3)
+
+[node name="tree" parent="." instance=ExtResource("5_hwvh7")]
+position = Vector2(330, 264)
+scale = Vector2(3, 3)
+
+[node name="Player" parent="." instance=ExtResource("4_f2xfl")]
+position = Vector2(35, 281)
+
+[connection signal="body_entered" from="ToInDoor" to="." method="_on_to_in_door_body_entered"]

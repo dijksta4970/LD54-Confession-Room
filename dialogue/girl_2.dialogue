@@ -1,0 +1,177 @@
+~ start
+
+Young Girl: My [shake rate=10 level=3]brother[/shake], he's gone! *sobs uncontrollably*
+Young Girl: He left without a trace. It's been days, and I can't find him - no matter how much I search! *weeps bitterly*
+- How long ago did he run away?
+	Young Girl: I can't recall exactly since he vanished. But it hasn't been very long.
+	- What happened? Why did he suddenly disappear?
+		=> girl_3_1
+- Call the police, now
+	=> girl_3_2
+
+
+~ girl_3_1
+Young Girl: [shake rate=5 level=5]Dad[/shake] hit him. That's why he ran away.
+- We need to contact the police
+	Me: This isn't just a matter of escaping danger; it's about protecting you from your dad's violence.
+	Me: Honey, I'll help you call the police. We need to find your brother first and then deal with this dad situation.
+	Me: I need to ensure your and your brother's safety.
+	set value += 1
+	do emit("value_changed", value)
+	Young Girl: No, don't call the police...please!!
+	Young Girl: It was all my fault.
+	Young Girl: I had told mom that brother snatched her money, but it was me.
+	- Oh, so it's you, is it?
+		Me: Why did you take something that doesn't belong to you?
+		=> girl_3_5
+- Why did your dad hit him?
+	Young Girl: Mama was mad 'cause she believed its brother took her coins, and [shake rate=5 level=5]Papa[/shake] got real grouchy so...
+	- He took mama's money?
+		=> girl_3_4
+
+~ girl_3_2
+Young Girl: No cops! It was all me! I'm begging you, don't call them! 
+Young Girl: If they come, I'll be thrown in jail - No please! Don't do it!
+Me: You won't get into trouble here; just tell me slowly.
+Young Girl: It all begins with me — I'm the one who told mom he stole her money.
+- Did your brother really take the money?
+	=> girl_3_4
+- So your mom got angry and kicked your brother out the house?
+	Young Girl: [shake rate=20 level=5]Mom[/shake] was so angry she threw a punch at my brother, and he ran away in fear.
+	- It's not your fault at all
+		Young Girl: But it was actually...
+		Young Girl: me.
+		Young Girl: It's me. I took mama's coins.
+		- Oh it's you.. Why did you do that, sweetie?
+		 	=> girl_3_5
+		
+~ girl_3_4
+
+Young Girl: But it was actually...
+Young Girl: me.
+Young Girl: It's me. I took mama's coins.
+- Oh it's you.. Why did you do that, sweetie?
+
+=> girl_3_5
+
+~ girl_3_5
+Young Girl: Because.. I wanted so desperately to get the pink hair ribbon, but my parents refused to buy it for me. 
+Young Girl: Everywhere I looked, all the other girls had these beautiful gadgets that made them feel special. 
+Young Girl: All I wanted was a simple hair ribbon, but why were my parents so adamant against it?
+- It's lovely
+	Me: Sounds like you enjoyed it a lot.
+	Young Girl: Because it's so pretty.
+	The young girl's voice is brighter, and she appears to have a great desire to keep discussing the ribbon.
+	- The Lord will certainly forgive for such a stunning ribbon.
+		set value -= 1
+		do emit("value_changed", value)
+		The young girl giggles.
+		Then, after remembering something else, she becomes quiet again.
+		Young Girl: But my brother.. I am here for my brother!
+		- Do you have any idea where your brother might have gone?
+			=> girl_3_7
+- Is that the pink ribbon you're wearing?
+	=> girl_3_6
+- That's not a reason to lie.
+	Young Girl: I know I did wrong, but...
+	=> girl_3_6
+	
+	
+~ girl_3_6
+Young Girl: It's stunning, isn't it? This ribbon is the most exquisite one I've ever seen.
+- Indeed
+She appears to have a great desire to keep discussing the ribbon.
+Me: It's indeed very pretty.
+Me: It's truly lovely. Did your parents catch a glimpse of the ribbon?
+Young Girl: Um, yeah...
+Young Girl: [shake rate=20 level=10]They saw it.[/shake]
+Young Girl: ..Did they?
+Young Girl: Nah they didn't. Otherwise, [shake rate=10 level=5]dad[/shake] would have given me the same punishment he gave my brother.
+Young Girl: I need to find him...as soon as possible!!
+- Do you have any idea where your brother might have gone?
+=> girl_3_7
+
+
+~ girl_3_7
+Young Girl: My brother is a fan of the Bakery.
+Young Girl: He goes to the shop on sunny afternoons when he can afford time for leisure.
+Young Girl: The bread was so fresh with buttery sweety smells.
+That bakery is a local favorite; it's quite popular with the youngsters.
+I couldn't help but be surprised by the strange coincidence of it all. 
+It was near here, close to the church, a place I had visited many times before in my life.
+Young Girl: Is the Bakery close to.. here?
+- What is my brother's appearance?
+	Young Girl: Chestnut-colored, curly hair... He was about my height. 
+	Young Girl: Why do you ask that? Surely you saw him!
+	- Yes, I saw him last night.
+		Young Girl: [shake rate=10 level=5]Where is he?![/shake] Please, tell me now do not keep me in suspense. Hurry!
+		Young Girl: If my brother doesn't come home soon, Mom and Dad will be incredibly worried!
+		- Tell her
+			Me: Don't worry, he's safe right now.
+			=> girl_3_8
+			
+		- Don't tell her
+			Me: Don't be panic; he's in a secure location. I will lead you to where he is later on.
+			Young Girl: I know the effort would be overwhelming for you. 
+			Young Girl: With every second ticking away, I need to bring him home before the sun sets and [shake rate=20 level=10]mom and dad[/shake] wont be driven into a frantic fear.
+			- Okay, I will tell you
+				=> girl_3_8
+			- Are you in such a hurry?
+				Me: Take it easy out there.
+				Me: Or would you like me to tag along with you to the police station?
+				
+				=> girl_3_9
+		- I will call the police for you
+			
+			=> girl_3_9
+
+~ girl_3_8
+
+You scribble the address on a scrap of paper.
+Young Girl: Much much appreciated!
+Young Girl: I'll head over there and [shake rate=10 level=10]seek him out[/shake] now.
+The young girl's voice trembles a bit. 
+She's probably excited to find her brother soon.
+You hear her jumping off the chair and running away.
+set finish_girl = 2
+do emit("_finish_girl", finish_girl)
+=> END
+
+~ girl_3_9
+
+Me: The police will help you.
+Young Girl: [shake rate=20 level=10]NO, don't even try![/shake]
+- ......
+Young Girl: You're no help!, at all!
+Young Girl: [shake rate=10 level=5]I have to..[/shake] I will figure it out by myself!
+The young girl's voice trembles a bit.
+Maybe she's too angry with me and feeling emotionally unstable.
+You hear her jumping off the chair and running away.
+- This is quite suspicious...
+	Me: This girl speaks in a contradictory manner, raising suspicions.
+	Me: That boy..
+	Me: Is the boy I saved yesterday?
+	Me: I need to call the police..
+	Me: NOW!
+	set finish_girl = 1
+	do emit("_finish_girl", finish_girl)
+	=> END
+- Chase after her
+	Me: Wait!
+	Me: Well... let me tell you.
+	You scribble the address on a scrap of paper.
+	Young Girl: Much much appreciated!
+	Young Girl: I'll head over there and seek him out now.
+	set finish_girl = 2
+	do emit("_finish_girl", finish_girl)
+	=> END
+- Let her go
+	Me: Just let it go.
+	Me: There's plenty of stuff to stress over on a daily basis...
+	Me: Just head home.
+	set value -= 1
+	do emit("value_changed", value)
+	set finish_girl = 3
+	do emit("_finish_girl", finish_girl)
+	=> END
+

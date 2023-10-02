@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=3 uid="uid://clx61vc85jivh"]
+
+[ext_resource type="Texture2D" uid="uid://5fpriuw4fpl3" path="res://assets/conf_candel_long.png" id="1_4yvvg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urpjv"]
+atlas = ExtResource("1_4yvvg")
+region = Rect2(0, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8325d"]
+atlas = ExtResource("1_4yvvg")
+region = Rect2(660, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jrmcp"]
+atlas = ExtResource("1_4yvvg")
+region = Rect2(1320, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ttye"]
+atlas = ExtResource("1_4yvvg")
+region = Rect2(1980, 0, 660, 340)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fkmid"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urpjv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8325d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jrmcp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ttye")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]
+
+[sub_resource type="Curve" id="Curve_16p2t"]
+max_value = 5.0
+_data = [Vector2(0.00531915, 2.78947), 0.0, 0.0, 0, 0, Vector2(0.779255, 0.947369), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_inoi8"]
+interpolation_color_space = 1
+offsets = PackedFloat32Array(0, 0.0057971, 0.0202899, 1)
+colors = PackedColorArray(1, 0.993837, 0.973918, 1, 1, 1, 1, 1, 1, 0.0666667, 0, 0.698039, 1, 0.913725, 0.380392, 0.709804)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+position = Vector2(330, 170)
+sprite_frames = SubResource("SpriteFrames_fkmid")
+autoplay = "default"
+frame_progress = 0.0443341
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(-168, -65)
+amount = 17
+lifetime = 2.0
+emission_shape = 2
+emission_sphere_radius = 5.37
+spread = 65.2
+gravity = Vector2(0, -98)
+scale_amount_curve = SubResource("Curve_16p2t")
+color = Color(1, 0.541176, 0.0313726, 0.803922)
+color_ramp = SubResource("Gradient_inoi8")

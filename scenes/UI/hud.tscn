@@ -1,0 +1,58 @@
+[gd_scene load_steps=7 format=3 uid="uid://bhmipu6gcgh21"]
+
+[ext_resource type="Texture2D" uid="uid://diysxsh2gxuhr" path="res://assets/candel_L-M-S.png" id="1_bhjbp"]
+[ext_resource type="Script" path="res://scenes/UI/value_animation.gd" id="2_o26dy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2qlpv"]
+atlas = ExtResource("1_bhjbp")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aqljq"]
+atlas = ExtResource("1_bhjbp")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eq0hb"]
+atlas = ExtResource("1_bhjbp")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2adjm"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2qlpv")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aqljq")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eq0hb")
+}],
+"loop": false,
+"name": &"2",
+"speed": 5.0
+}]
+
+[node name="hud" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="value_animation" type="AnimatedSprite2D" parent="."]
+position = Vector2(640, 23)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_2adjm")
+animation = &"2"
+script = ExtResource("2_o26dy")

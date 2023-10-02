@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://b1g863qancdxy"]
+
+[ext_resource type="Script" path="res://scenes/ENDing/end_1.gd" id="1_chrcm"]
+[ext_resource type="Texture2D" uid="uid://706qy1gkpgul" path="res://assets/night.png" id="2_21fet"]
+[ext_resource type="FontFile" uid="uid://ymj2krtbfxbp" path="res://assets/fonts/PixelifySans-Regular.ttf" id="3_5b1bl"]
+[ext_resource type="Texture2D" uid="uid://b24x513xjsr5a" path="res://assets/back.png" id="4_1cabk"]
+[ext_resource type="PackedScene" uid="uid://ccsod1wsokn2l" path="res://scenes/helper/transition.tscn" id="5_ntj8i"]
+
+[sub_resource type="Theme" id="Theme_6fm63"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6xrxd"]
+font = ExtResource("3_5b1bl")
+font_size = 18
+shadow_size = 3
+
+[node name="end_2" type="Node2D"]
+script = ExtResource("1_chrcm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 170)
+texture = ExtResource("2_21fet")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 23.0
+offset_top = 111.0
+offset_right = 624.0
+offset_bottom = 328.0
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
+color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+
+[node name="Label" type="Label" parent="MarginContainer"]
+texture_filter = 1
+layout_mode = 2
+theme = SubResource("Theme_6fm63")
+text = "That boy is missing.
+
+That little girl is gone, as well.
+
+Is it something you did? What could you have done wrong?
+"
+label_settings = SubResource("LabelSettings_6xrxd")
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 25.0
+offset_bottom = 25.0
+scale = Vector2(1.5, 1.5)
+icon = ExtResource("4_1cabk")
+flat = true
+
+[node name="transition" parent="." instance=ExtResource("5_ntj8i")]
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed" flags=18]
+[connection signal="animation_finished" from="transition" to="." method="_on_transition_animation_finished" flags=18]

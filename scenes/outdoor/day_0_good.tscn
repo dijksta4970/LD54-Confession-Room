@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://bqxrbrlhnwm3f"]
+
+[ext_resource type="FontFile" uid="uid://5lpyog6ndfw6" path="res://assets/fonts/PrStart.ttf" id="1_aqfis"]
+[ext_resource type="Script" path="res://scenes/outdoor/day_0_good.gd" id="1_ijk3x"]
+[ext_resource type="PackedScene" uid="uid://ccsod1wsokn2l" path="res://scenes/helper/transition.tscn" id="3_cqnsv"]
+
+[sub_resource type="Theme" id="Theme_ob8jl"]
+default_font = ExtResource("1_aqfis")
+default_font_size = 20
+
+[node name="Day0_good" type="Node2D"]
+script = ExtResource("1_ijk3x")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 676.0
+offset_bottom = 355.0
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="ColorRect"]
+layout_mode = 0
+offset_left = 119.0
+offset_top = 95.0
+offset_right = 535.0
+offset_bottom = 185.0
+theme = SubResource("Theme_ob8jl")
+text = "Few days later ..."
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 3.644
+one_shot = true
+autostart = true
+
+[node name="transition" parent="." instance=ExtResource("3_cqnsv")]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="animation_finished" from="transition" to="." method="_on_transition_animation_finished"]

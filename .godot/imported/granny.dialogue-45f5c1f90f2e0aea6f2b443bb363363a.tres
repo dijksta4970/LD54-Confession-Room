@@ -1,0 +1,512 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_gc3t6"]
+
+[resource]
+script = ExtResource("1_gc3t6")
+titles = {
+"fg_1": "38",
+"fg_2": "43",
+"start": "4"
+}
+character_names = PackedStringArray("Me", "Elder Lady")
+first_title = "4"
+lines = {
+"1": {
+"id": "1",
+"next_id": "4",
+"text": "start",
+"type": "title"
+},
+"10": {
+"id": "10",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "8",
+"type": "goto"
+},
+"11": {
+"id": "11",
+"next_id": "12",
+"next_id_after": "24",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "The confessional? I don't think you will have anything to be sorry for.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The confessional? I don't think you will have anything to be sorry for.",
+"type": "response"
+},
+"12": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "13",
+"parent_id": "11",
+"tags": PackedStringArray(),
+"text": "The old lady chuckled quietly.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The old lady chuckled quietly.",
+"type": "dialogue"
+},
+"13": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "14",
+"parent_id": "11",
+"tags": PackedStringArray(),
+"text": "Would you care to listen to my lengthy tale?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Would you care to listen to my lengthy tale?",
+"type": "dialogue"
+},
+"14": {
+"id": "14",
+"next_id": "15",
+"next_id_after": "24",
+"parent_id": "11",
+"responses": PackedStringArray("14", "17"),
+"tags": PackedStringArray(),
+"text": "Sure, please come with me.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Sure, please come with me.",
+"type": "response"
+},
+"15": {
+"id": "15",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "emit",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "_start_granny"
+}])])
+}])
+},
+"next_id": "16",
+"parent_id": "14",
+"type": "mutation"
+},
+"16": {
+"id": "16",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "14",
+"type": "goto"
+},
+"17": {
+"id": "17",
+"next_id": "18",
+"next_id_after": "24",
+"parent_id": "11",
+"tags": PackedStringArray(),
+"text": "I apologise for not being able to help you.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I apologise for not being able to help you.",
+"type": "response"
+},
+"18": {
+"id": "18",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "17",
+"type": "goto"
+},
+"19": {
+"id": "19",
+"next_id": "20",
+"next_id_after": "24",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "Sorry, not available at the moment.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Sorry, not available at the moment.",
+"type": "response"
+},
+"20": {
+"id": "20",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "value"
+}, {
+"type": "assignment",
+"value": "-="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "21",
+"parent_id": "19",
+"type": "mutation"
+},
+"21": {
+"id": "21",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "emit",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "value_changed"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "value"
+}])])
+}])
+},
+"next_id": "22",
+"parent_id": "19",
+"type": "mutation"
+},
+"22": {
+"id": "22",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "19",
+"type": "goto"
+},
+"24": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "met_granny_out"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": true
+}, {
+"type": "colon"
+}])
+},
+"id": "24",
+"next_conditional_id": "38",
+"next_id": "25",
+"next_id_after": "38",
+"type": "condition"
+},
+"25": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "finish_granny"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "number",
+"value": 1
+}, {
+"type": "colon"
+}])
+},
+"id": "25",
+"next_conditional_id": "27",
+"next_id": "26",
+"next_id_after": "27",
+"parent_id": "24",
+"type": "condition"
+},
+"26": {
+"id": "26",
+"is_snippet": false,
+"next_id": "38",
+"parent_id": "25",
+"type": "goto"
+},
+"27": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "finish_granny"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "number",
+"value": 2
+}, {
+"type": "colon"
+}])
+},
+"id": "27",
+"next_conditional_id": "29",
+"next_id": "28",
+"next_id_after": "29",
+"parent_id": "24",
+"type": "condition"
+},
+"28": {
+"id": "28",
+"is_snippet": false,
+"next_id": "43",
+"parent_id": "27",
+"type": "goto"
+},
+"29": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "finish_granny"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "number",
+"value": 0
+}, {
+"type": "colon"
+}])
+},
+"id": "29",
+"next_conditional_id": "38",
+"next_id": "30",
+"next_id_after": "38",
+"parent_id": "24",
+"type": "condition"
+},
+"30": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "30",
+"next_id": "31",
+"parent_id": "29",
+"tags": PackedStringArray(),
+"text": "It's wonderful to see you again. Has Mr. Bishop had a change of heart? Would you like to talk with me?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It's wonderful to see you again. Has Mr. Bishop had a change of heart? Would you like to talk with me?",
+"type": "dialogue"
+},
+"31": {
+"id": "31",
+"next_id": "32",
+"next_id_after": "34",
+"parent_id": "29",
+"responses": PackedStringArray("31", "33"),
+"tags": PackedStringArray(),
+"text": "Sure, please come with me.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Sure, please come with me.",
+"type": "response"
+},
+"32": {
+"id": "32",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "emit",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "_start_granny"
+}])])
+}])
+},
+"next_id": "34",
+"parent_id": "31",
+"type": "mutation"
+},
+"33": {
+"id": "33",
+"next_id": "34",
+"next_id_after": "34",
+"parent_id": "29",
+"tags": PackedStringArray(),
+"text": "I apologise for not being able to help you.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I apologise for not being able to help you.",
+"type": "response"
+},
+"34": {
+"id": "34",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "29",
+"type": "goto"
+},
+"37": {
+"id": "37",
+"next_id": "38",
+"text": "fg_1",
+"type": "title"
+},
+"38": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "38",
+"next_id": "39",
+"tags": PackedStringArray(),
+"text": "......",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "......",
+"type": "dialogue"
+},
+"39": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "39",
+"next_id": "40",
+"tags": PackedStringArray(),
+"text": "Just don't bring trouble upon myself.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Just don't bring trouble upon myself.",
+"type": "dialogue"
+},
+"4": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "met_granny_out"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": false
+}, {
+"type": "colon"
+}])
+},
+"id": "4",
+"next_conditional_id": "24",
+"next_id": "5",
+"next_id_after": "24",
+"type": "condition"
+},
+"40": {
+"id": "40",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"42": {
+"id": "42",
+"next_id": "43",
+"text": "fg_2",
+"type": "title"
+},
+"43": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "43",
+"next_id": "44",
+"tags": PackedStringArray(),
+"text": "Bless you, Your Grace!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Bless you, Your Grace!",
+"type": "dialogue"
+},
+"44": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "44",
+"next_id": "45",
+"tags": PackedStringArray(),
+"text": "I feel so grateful to you..",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I feel so grateful to you..",
+"type": "dialogue"
+},
+"45": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "45",
+"next_id": "46",
+"tags": PackedStringArray(),
+"text": "Once I'm reunited with my sister, I shall return the favor.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Once I'm reunited with my sister, I shall return the favor.",
+"type": "dialogue"
+},
+"46": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "46",
+"next_id": "47",
+"tags": PackedStringArray(),
+"text": "Wishing you all the best of luck. Amen!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wishing you all the best of luck. Amen!",
+"type": "dialogue"
+},
+"47": {
+"id": "47",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"5": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "[[Hi|Hello]], [wait=1]Good to see you again. Have you come here to say a prayer as well?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Hi|Hello]], [wait=1]Good to see you again. Have you come here to say a prayer as well?",
+"type": "dialogue"
+},
+"6": {
+"id": "6",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "met_granny_out"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "7",
+"parent_id": "4",
+"type": "mutation"
+},
+"7": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"parent_id": "4",
+"tags": PackedStringArray(),
+"text": "[[Hello|Morning|Good Morning]], No, I want to talk to you in the confessional today.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Hello|Morning|Good Morning]], No, I want to talk to you in the confessional today.",
+"type": "dialogue"
+},
+"8": {
+"id": "8",
+"next_id": "9",
+"next_id_after": "24",
+"parent_id": "4",
+"responses": PackedStringArray("8", "11", "19"),
+"tags": PackedStringArray(),
+"text": "Sure, please come with me.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Sure, please come with me.",
+"type": "response"
+},
+"9": {
+"id": "9",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "emit",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "_start_granny"
+}])])
+}])
+},
+"next_id": "10",
+"parent_id": "8",
+"type": "mutation"
+}
+}
+metadata/dialogue_manager_version = "2.25.1"

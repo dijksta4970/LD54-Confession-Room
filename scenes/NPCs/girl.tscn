@@ -1,0 +1,73 @@
+[gd_scene load_steps=12 format=3 uid="uid://dni8us7u57sr1"]
+
+[ext_resource type="Texture2D" uid="uid://bdidrr57otxuk" path="res://assets/girl_walk.png" id="1_ad7r8"]
+[ext_resource type="Texture2D" uid="uid://cmwwh8kftyf2t" path="res://assets/girl.png" id="2_sa8jc"]
+[ext_resource type="PackedScene" uid="uid://b6d4rucklcn3u" path="res://scenes/helper/action.tscn" id="3_4ovf8"]
+[ext_resource type="Resource" uid="uid://ojum2j4m1u4" path="res://dialogue/girl.dialogue" id="4_83ogi"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d6w2w"]
+atlas = ExtResource("1_ad7r8")
+region = Rect2(0, 0, 20, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ghw2"]
+atlas = ExtResource("1_ad7r8")
+region = Rect2(20, 0, 20, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vn4rc"]
+atlas = ExtResource("1_ad7r8")
+region = Rect2(40, 0, 20, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ve8vk"]
+atlas = ExtResource("1_ad7r8")
+region = Rect2(60, 0, 20, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pq2v7"]
+atlas = ExtResource("2_sa8jc")
+region = Rect2(0, 0, 20, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0lc57"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d6w2w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ghw2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vn4rc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ve8vk")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pq2v7")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hgpbh"]
+radius = 5.0
+height = 20.0
+
+[node name="Girl" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_0lc57")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("CapsuleShape2D_hgpbh")
+
+[node name="Actionable" parent="." instance=ExtResource("3_4ovf8")]
+position = Vector2(0, 7)
+scale = Vector2(0.7, 0.7)
+dialogue_resource = ExtResource("4_83ogi")

@@ -1,0 +1,70 @@
+[gd_scene load_steps=9 format=3 uid="uid://dq42jj13tux47"]
+
+[ext_resource type="Script" path="res://scenes/main/menu.gd" id="1_72wea"]
+[ext_resource type="FontFile" uid="uid://c1j78aqtxb1es" path="res://assets/fonts/prstartk.ttf" id="1_go3vj"]
+[ext_resource type="FontFile" uid="uid://5lpyog6ndfw6" path="res://assets/fonts/PrStart.ttf" id="2_vywwe"]
+[ext_resource type="PackedScene" uid="uid://ccsod1wsokn2l" path="res://scenes/helper/transition.tscn" id="4_vpawn"]
+[ext_resource type="AudioStream" uid="uid://dq213xx7u7fvc" path="res://assets/sound/biu.wav" id="5_li0v0"]
+
+[sub_resource type="Theme" id="Theme_ewu8x"]
+default_font = ExtResource("1_go3vj")
+
+[sub_resource type="Theme" id="Theme_4wj2c"]
+default_font = ExtResource("2_vywwe")
+
+[sub_resource type="Theme" id="Theme_8ff05"]
+default_font = ExtResource("2_vywwe")
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_72wea")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -68.0
+offset_top = -80.0
+offset_right = 68.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+
+[node name="start" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_ewu8x")
+text = "START"
+flat = true
+
+[node name="TUTORIAL" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_4wj2c")
+text = "TUTORIAL
+"
+flat = true
+
+[node name="quit" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_8ff05")
+text = "QUIT"
+flat = true
+
+[node name="transition" parent="." instance=ExtResource("4_vpawn")]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_li0v0")
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/TUTORIAL" to="." method="_on_tutorial_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/quit" to="." method="_on_quit_pressed"]
+[connection signal="animation_finished" from="transition" to="." method="_on_transition_animation_finished"]

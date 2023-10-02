@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://d4kt7jsrvgtay"]
+
+[ext_resource type="PackedScene" uid="uid://clx61vc85jivh" path="res://scenes/main/confession_room_empty.tscn" id="1_lcns3"]
+[ext_resource type="PackedScene" uid="uid://cqsrdiuc5q1oy" path="res://scenes/main/title.tscn" id="2_rwg04"]
+
+[node name="title" type="Node2D"]
+
+[node name="empty" parent="." instance=ExtResource("1_lcns3")]
+
+[node name="title" parent="." instance=ExtResource("2_rwg04")]

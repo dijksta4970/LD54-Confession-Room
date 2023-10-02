@@ -1,0 +1,25 @@
+[gd_scene load_steps=6 format=3 uid="uid://c5ikn5u76il1k"]
+
+[ext_resource type="Script" path="res://scenes/room/confession_Lady.gd" id="1_uf0wf"]
+[ext_resource type="PackedScene" uid="uid://ca3p3qnqabp4t" path="res://scenes/room/inroom_old_lady.tscn" id="2_w7uik"]
+[ext_resource type="PackedScene" uid="uid://bvh6k6dldbon7" path="res://scenes/UI/Conversation_start.tscn" id="3_neqhx"]
+[ext_resource type="PackedScene" uid="uid://daiad5trt3kae" path="res://scenes/helper/confession_balloon_start.tscn" id="4_efj7o"]
+[ext_resource type="Resource" uid="uid://b2s5lj7km8cws" path="res://dialogue/granny_2.dialogue" id="5_n3vp7"]
+
+[node name="ConfessionLady" type="Node2D"]
+script = ExtResource("1_uf0wf")
+
+[node name="OldLady" parent="." instance=ExtResource("2_w7uik")]
+
+[node name="Control" parent="." instance=ExtResource("3_neqhx")]
+offset_left = 475.0
+offset_top = 253.0
+offset_right = 475.0
+offset_bottom = 253.0
+
+[node name="confession_balloon_start" parent="." instance=ExtResource("4_efj7o")]
+position = Vector2(475, 256)
+dialogue_resource = ExtResource("5_n3vp7")
+
+[connection signal="mouse_entered" from="confession_balloon_start" to="." method="_on_confession_balloon_start_mouse_entered"]
+[connection signal="mouse_exited" from="confession_balloon_start" to="." method="_on_confession_balloon_start_mouse_exited"]

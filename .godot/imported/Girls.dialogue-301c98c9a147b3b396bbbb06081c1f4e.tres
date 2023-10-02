@@ -1,0 +1,586 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_wd88y"]
+
+[resource]
+script = ExtResource("1_wd88y")
+titles = {
+"granny_2nd": "13",
+"granny_3_1": "41",
+"granny_3_2": "53",
+"granny_start": "3"
+}
+character_names = PackedStringArray("Me", "Elder Lady")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "granny_start",
+"type": "title"
+},
+"11": {
+"id": "11",
+"next_id": "13",
+"text": "granny_2nd",
+"type": "title"
+},
+"13": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "14",
+"tags": PackedStringArray(),
+"text": "有些事情，还是在这样的房间里才有勇气说出来呢。",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "有些事情，还是在这样的房间里才有勇气说出来呢。",
+"type": "dialogue"
+},
+"14": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "15",
+"tags": PackedStringArray(),
+"text": "当然。我不会评判您的过往，只是一个倾听者。",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "当然。我不会评判您的过往，只是一个倾听者。",
+"type": "dialogue"
+},
+"15": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "16",
+"tags": PackedStringArray(),
+"text": "我并不是这座城市里土生土长的人。我出生在南部一个小村庄。家里有爸爸妈妈和一个姐姐。",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "我并不是这座城市里土生土长的人。我出生在南部一个小村庄。家里有爸爸妈妈和一个姐姐。",
+"type": "dialogue"
+},
+"16": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"tags": PackedStringArray(),
+"text": "生活简单且平静，是很多人所追求的。但我却一直向往着外面的世界。只是，家里只够自给自足地在村子里生活，没有能力去城市里。",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "生活简单且平静，是很多人所追求的。但我却一直向往着外面的世界。只是，家里只够自给自足地在村子里生活，没有能力去城市里。",
+"type": "dialogue"
+},
+"17": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "18",
+"tags": PackedStringArray(),
+"text": "日子就这样一天天地过去，我和姐姐都到快到了嫁人的年纪。",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "日子就这样一天天地过去，我和姐姐都到快到了嫁人的年纪。",
+"type": "dialogue"
+},
+"18": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "18",
+"next_id": "19",
+"tags": PackedStringArray(),
+"text": "有一天，姐姐多年的笔友寄来了一封特殊的信。他向姐姐求婚，希望她能嫁去城市里和他一起生活。",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "有一天，姐姐多年的笔友寄来了一封特殊的信。他向姐姐求婚，希望她能嫁去城市里和他一起生活。",
+"type": "dialogue"
+},
+"19": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "19",
+"next_id": "20",
+"tags": PackedStringArray(),
+"text": "姐姐很激动，却犹豫着。她说她放不下世世代代在村子里生活的父母。但在我看来，她是害怕离开家，去往陌生的城市，不然这些年，笔友多次邀请她去城里，她为什么一直推辞？",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "姐姐很激动，却犹豫着。她说她放不下世世代代在村子里生活的父母。但在我看来，她是害怕离开家，去往陌生的城市，不然这些年，笔友多次邀请她去城里，她为什么一直推辞？",
+"type": "dialogue"
+},
+"20": {
+"id": "20",
+"next_id": "21",
+"next_id_after": "24",
+"responses": PackedStringArray("20", "22"),
+"tags": PackedStringArray(),
+"text": "或许是她真的不愿离开日渐衰老的父母呢？",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "或许是她真的不愿离开日渐衰老的父母呢？",
+"type": "response"
+},
+"21": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "21",
+"next_id": "24",
+"parent_id": "20",
+"tags": PackedStringArray(),
+"text": "也许真的是这样，也许她更喜欢村子里的生活。",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "也许真的是这样，也许她更喜欢村子里的生活。",
+"type": "dialogue"
+},
+"22": {
+"id": "22",
+"next_id": "23",
+"next_id_after": "24",
+"tags": PackedStringArray(),
+"text": "......",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "......",
+"type": "response"
+},
+"23": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "23",
+"next_id": "24",
+"parent_id": "22",
+"tags": PackedStringArray(),
+"text": "也许是我想错了，也许她是为了日渐衰老的父母才选择留下的。",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "也许是我想错了，也许她是为了日渐衰老的父母才选择留下的。",
+"type": "dialogue"
+},
+"24": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "24",
+"next_id": "25",
+"tags": PackedStringArray(),
+"text": "但这可是难得的去城市里的机会。无论如何，不能浪费这个机会。无论是谁...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "但这可是难得的去城市里的机会。无论如何，不能浪费这个机会。无论是谁...",
+"type": "dialogue"
+},
+"25": {
+"id": "25",
+"next_id": "26",
+"next_id_after": "41",
+"responses": PackedStringArray("25", "31"),
+"tags": PackedStringArray(),
+"text": "难道您？顶替了您的姐姐？",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "难道您？顶替了您的姐姐？",
+"type": "response"
+},
+"26": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "26",
+"next_id": "27",
+"parent_id": "25",
+"tags": PackedStringArray(),
+"text": "您真的很敏锐呢。是的，我拿着那封求婚信，来到了这座城市。",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "您真的很敏锐呢。是的，我拿着那封求婚信，来到了这座城市。",
+"type": "dialogue"
+},
+"27": {
+"id": "27",
+"next_id": "28",
+"next_id_after": "41",
+"parent_id": "25",
+"responses": PackedStringArray("27", "29"),
+"tags": PackedStringArray(),
+"text": "您的意思是，您偷走了那封信？",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "您的意思是，您偷走了那封信？",
+"type": "response"
+},
+"28": {
+"id": "28",
+"is_snippet": false,
+"next_id": "41",
+"parent_id": "27",
+"type": "goto"
+},
+"29": {
+"id": "29",
+"next_id": "30",
+"next_id_after": "41",
+"parent_id": "25",
+"tags": PackedStringArray(),
+"text": "您就这样偷走了本因属于您姐姐的生活？",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "您就这样偷走了本因属于您姐姐的生活？",
+"type": "response"
+},
+"3": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"tags": PackedStringArray(),
+"text": "[[Hi|Hello]], [wait=1]很高兴再次见到您。今天您也是来祷告吗？.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Hi|Hello]], [wait=1]很高兴再次见到您。今天您也是来祷告吗？.",
+"type": "dialogue"
+},
+"30": {
+"id": "30",
+"is_snippet": false,
+"next_id": "41",
+"parent_id": "29",
+"type": "goto"
+},
+"31": {
+"id": "31",
+"next_id": "32",
+"next_id_after": "41",
+"tags": PackedStringArray(),
+"text": "无论是谁？",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "无论是谁？",
+"type": "response"
+},
+"32": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "32",
+"next_id": "33",
+"parent_id": "31",
+"tags": PackedStringArray(),
+"text": "是的，姐姐的笔友并不知道姐姐的样貌，只要拿着这封求婚信，谁都可以去，那为什么我不可以呢？",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "是的，姐姐的笔友并不知道姐姐的样貌，只要拿着这封求婚信，谁都可以去，那为什么我不可以呢？",
+"type": "dialogue"
+},
+"33": {
+"id": "33",
+"next_id": "34",
+"next_id_after": "41",
+"parent_id": "31",
+"responses": PackedStringArray("33", "35"),
+"tags": PackedStringArray(),
+"text": "您就这样偷走了本因属于您姐姐的生活？",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "您就这样偷走了本因属于您姐姐的生活？",
+"type": "response"
+},
+"34": {
+"id": "34",
+"is_snippet": false,
+"next_id": "41",
+"parent_id": "33",
+"type": "goto"
+},
+"35": {
+"id": "35",
+"next_id": "36",
+"next_id_after": "41",
+"parent_id": "31",
+"tags": PackedStringArray(),
+"text": "所以您带着那封信来到了这里？",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "所以您带着那封信来到了这里？",
+"type": "response"
+},
+"36": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "36",
+"next_id": "37",
+"parent_id": "35",
+"tags": PackedStringArray(),
+"text": "是的。",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "是的。",
+"type": "dialogue"
+},
+"37": {
+"id": "37",
+"is_snippet": false,
+"next_id": "53",
+"parent_id": "35",
+"type": "goto"
+},
+"4": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"tags": PackedStringArray(),
+"text": "早上好，主教。不，我今天想跟您在忏悔室聊聊。",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "早上好，主教。不，我今天想跟您在忏悔室聊聊。",
+"type": "dialogue"
+},
+"40": {
+"id": "40",
+"next_id": "41",
+"text": "granny_3_1",
+"type": "title"
+},
+"41": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "41",
+"next_id": "42",
+"tags": PackedStringArray(),
+"text": "就像我说的，您真的很敏锐。但是说“偷”...[wait=2]您是在指责我吗？",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "就像我说的，您真的很敏锐。但是说“偷”...[wait=2]您是在指责我吗？",
+"type": "dialogue"
+},
+"42": {
+"id": "42",
+"next_id": "43",
+"next_id_after": "53",
+"responses": PackedStringArray("42", "48"),
+"tags": PackedStringArray(),
+"text": "这就是偷窃行为啊！主不会原谅你的。",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "这就是偷窃行为啊！主不会原谅你的。",
+"type": "response"
+},
+"43": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "43",
+"next_id": "44",
+"parent_id": "42",
+"tags": PackedStringArray(),
+"text": "看来您不愿意听下去了，我的忏悔就到此为止吧。Amen。",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "看来您不愿意听下去了，我的忏悔就到此为止吧。Amen。",
+"type": "dialogue"
+},
+"44": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "44",
+"next_id": "45",
+"parent_id": "42",
+"tags": PackedStringArray(),
+"text": "你说得对，你就是夺走了本因属于她的生活，你是个不折不扣的小偷！",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "你说得对，你就是夺走了本因属于她的生活，你是个不折不扣的小偷！",
+"type": "dialogue"
+},
+"45": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "45",
+"next_id": "46",
+"parent_id": "42",
+"tags": PackedStringArray(),
+"text": "...[wait=1]这份罪过如果连主都无法宽恕，我该如何偿还呢...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "...[wait=1]这份罪过如果连主都无法宽恕，我该如何偿还呢...",
+"type": "dialogue"
+},
+"46": {
+"id": "46",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "42",
+"type": "goto"
+},
+"48": {
+"id": "48",
+"next_id": "49",
+"next_id_after": "53",
+"tags": PackedStringArray(),
+"text": "并没有，我为我鲁莽的用词向您道歉。我是来倾听您的忏悔的。请继续。",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "并没有，我为我鲁莽的用词向您道歉。我是来倾听您的忏悔的。请继续。",
+"type": "response"
+},
+"49": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "49",
+"next_id": "50",
+"parent_id": "48",
+"tags": PackedStringArray(),
+"text": "谢谢您，主教先生。",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "谢谢您，主教先生。",
+"type": "dialogue"
+},
+"5": {
+"id": "5",
+"next_id": "9",
+"next_id_after": "9",
+"responses": PackedStringArray("5", "6"),
+"tags": PackedStringArray(),
+"text": "好的，请随我来",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "好的，请随我来",
+"type": "response"
+},
+"50": {
+"id": "50",
+"is_snippet": false,
+"next_id": "53",
+"parent_id": "48",
+"type": "goto"
+},
+"52": {
+"id": "52",
+"next_id": "53",
+"text": "granny_3_2",
+"type": "title"
+},
+"53": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "53",
+"next_id": "54",
+"tags": PackedStringArray(),
+"text": "来到这座城市后，我模仿着姐姐的性格，和我的丈夫结婚了。事实证明，城市里的生活确实很适合我。我的家庭幸福美满，我丝毫不怀念曾经生活过的村子。",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "来到这座城市后，我模仿着姐姐的性格，和我的丈夫结婚了。事实证明，城市里的生活确实很适合我。我的家庭幸福美满，我丝毫不怀念曾经生活过的村子。",
+"type": "dialogue"
+},
+"54": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "54",
+"next_id": "55",
+"tags": PackedStringArray(),
+"text": "只是现在，我有些想念我的姐姐。我想知道她过得怎么样。",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "只是现在，我有些想念我的姐姐。我想知道她过得怎么样。",
+"type": "dialogue"
+},
+"55": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "55",
+"next_id": "56",
+"tags": PackedStringArray(),
+"text": "也许我真的夺走了本因属于她的生活。",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "也许我真的夺走了本因属于她的生活。",
+"type": "dialogue"
+},
+"56": {
+"id": "56",
+"next_id": "57",
+"next_id_after": "57",
+"responses": PackedStringArray("56"),
+"tags": PackedStringArray(),
+"text": "也许您可以试着给她写封信？",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "也许您可以试着给她写封信？",
+"type": "response"
+},
+"57": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "57",
+"next_id": "58",
+"tags": PackedStringArray(),
+"text": "可是这么多年过去，我都不知道她是否还活着。",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "可是这么多年过去，我都不知道她是否还活着。",
+"type": "dialogue"
+},
+"58": {
+"id": "58",
+"next_id": "59",
+"next_id_after": "end!",
+"responses": PackedStringArray("58", "61"),
+"tags": PackedStringArray(),
+"text": "总是可以试试的。",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "总是可以试试的。",
+"type": "response"
+},
+"59": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "59",
+"next_id": "60",
+"parent_id": "58",
+"tags": PackedStringArray(),
+"text": "您说得对，我会写信给她的。谢谢您，主教先生。Amen",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "您说得对，我会写信给她的。谢谢您，主教先生。Amen",
+"type": "dialogue"
+},
+"6": {
+"id": "6",
+"next_id": "7",
+"next_id_after": "9",
+"tags": PackedStringArray(),
+"text": "忏悔室？真看不出来您会有需要忏悔的事情啊。",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "忏悔室？真看不出来您会有需要忏悔的事情啊。",
+"type": "response"
+},
+"60": {
+"id": "60",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "58",
+"type": "goto"
+},
+"61": {
+"id": "61",
+"next_id": "62",
+"next_id_after": "end!",
+"tags": PackedStringArray(),
+"text": "我可以帮您联系村子所属教区的主教，他会知道您姐姐的消息。",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "我可以帮您联系村子所属教区的主教，他会知道您姐姐的消息。",
+"type": "response"
+},
+"62": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "62",
+"next_id": "63",
+"parent_id": "61",
+"tags": PackedStringArray(),
+"text": "那真是太好了。谢谢您，主教先生！Amen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "那真是太好了。谢谢您，主教先生！Amen.",
+"type": "dialogue"
+},
+"63": {
+"id": "63",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "61",
+"type": "goto"
+},
+"7": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "老太太无声地笑了。",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "老太太无声地笑了。",
+"type": "dialogue"
+},
+"8": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"parent_id": "6",
+"tags": PackedStringArray(),
+"text": "主教是否愿意听听我的故事呢？",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "主教是否愿意听听我的故事呢？",
+"type": "dialogue"
+},
+"9": {
+"id": "9",
+"is_snippet": false,
+"next_id": "13",
+"type": "goto"
+}
+}
+metadata/dialogue_manager_version = "2.25.1"

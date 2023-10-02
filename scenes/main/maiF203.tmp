@@ -1,0 +1,29 @@
+[gd_scene load_steps=6 format=3 uid="uid://dg1pgb2qwkml"]
+
+[ext_resource type="Script" path="res://scenes/main/main.gd" id="1_iu7qe"]
+[ext_resource type="PackedScene" uid="uid://d4kt7jsrvgtay" path="res://scenes/main/title_full.tscn" id="1_mfwh4"]
+[ext_resource type="PackedScene" uid="uid://dq42jj13tux47" path="res://scenes/main/menu.tscn" id="2_fokqk"]
+[ext_resource type="PackedScene" uid="uid://ccsod1wsokn2l" path="res://scenes/helper/transition.tscn" id="4_i51ab"]
+[ext_resource type="PackedScene" uid="uid://5lih3kciiwcb" path="res://scenes/UI/names.tscn" id="5_fv45j"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_iu7qe")
+
+[node name="title" parent="." instance=ExtResource("1_mfwh4")]
+
+[node name="Menu" parent="." instance=ExtResource("2_fokqk")]
+anchors_preset = 4
+anchor_top = 0.5
+anchor_right = 0.0
+anchor_bottom = 0.5
+offset_left = 330.0
+offset_top = 300.0
+offset_right = 330.0
+offset_bottom = 300.0
+grow_horizontal = 1
+
+[node name="transition" parent="." instance=ExtResource("4_i51ab")]
+
+[node name="Node2D" parent="." instance=ExtResource("5_fv45j")]
+position = Vector2(5, 4)
+scale = Vector2(0.5, 0.5)

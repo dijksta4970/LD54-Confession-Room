@@ -1,0 +1,58 @@
+[gd_scene load_steps=8 format=3 uid="uid://g750uuvkt77k"]
+
+[ext_resource type="Script" path="res://scenes/ENDing/end_1.gd" id="1_0kbmq"]
+[ext_resource type="Texture2D" uid="uid://706qy1gkpgul" path="res://assets/night.png" id="1_vwqi7"]
+[ext_resource type="FontFile" uid="uid://ymj2krtbfxbp" path="res://assets/fonts/PixelifySans-Regular.ttf" id="2_pdx1o"]
+[ext_resource type="Texture2D" uid="uid://b24x513xjsr5a" path="res://assets/back.png" id="3_ych0r"]
+[ext_resource type="PackedScene" uid="uid://ccsod1wsokn2l" path="res://scenes/helper/transition.tscn" id="5_x3s3n"]
+
+[sub_resource type="Theme" id="Theme_6fm63"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_6xrxd"]
+line_spacing = 1.0
+font = ExtResource("2_pdx1o")
+font_size = 17
+shadow_size = 3
+
+[node name="end_1" type="Node2D"]
+script = ExtResource("1_0kbmq")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, 170)
+texture = ExtResource("1_vwqi7")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_left = 23.0
+offset_top = 15.0
+offset_right = 624.0
+offset_bottom = 323.0
+
+[node name="ColorRect" type="ColorRect" parent="MarginContainer"]
+layout_mode = 2
+color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+
+[node name="Label" type="Label" parent="MarginContainer"]
+texture_filter = 1
+layout_mode = 2
+theme = SubResource("Theme_6fm63")
+text = "You called the police, and as the night progressed, you received the news that they had found the little boy. He had been targeted because he had learned some secrets, but fortunately, he had crossed paths with you.
+
+Your suspicions had been correct all along. In fact, the little girl had come solely to gather information about the little boy from you, as she had been sent on a mission by her 'parents.' Without police involvement, she might have become a target if her attempts to resolve the issue had failed.
+
+It was a stroke of luck, and you felt that the Almighty would bless you."
+label_settings = SubResource("LabelSettings_6xrxd")
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="."]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 25.0
+offset_bottom = 25.0
+scale = Vector2(1.5, 1.5)
+icon = ExtResource("3_ych0r")
+flat = true
+
+[node name="transition" parent="." instance=ExtResource("5_x3s3n")]
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="animation_finished" from="transition" to="." method="_on_transition_animation_finished"]

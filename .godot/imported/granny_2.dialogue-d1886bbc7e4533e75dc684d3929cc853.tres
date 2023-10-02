@@ -1,0 +1,896 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_d0q2t"]
+
+[resource]
+script = ExtResource("1_d0q2t")
+titles = {
+"granny_3_1": "43",
+"granny_3_2": "64",
+"start": "3"
+}
+character_names = PackedStringArray("Elder Lady", "Me")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"10": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"tags": PackedStringArray(),
+"text": "I wondered who would be her man. The blacksmith's son? The baker's son? Or perhaps the hunter?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I wondered who would be her man. The blacksmith's son? The baker's son? Or perhaps the hunter?",
+"type": "dialogue"
+},
+"11": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "12",
+"tags": PackedStringArray(),
+"text": "It was truly astounding when my beloved sister received a letter from her cherished pen pal.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It was truly astounding when my beloved sister received a letter from her cherished pen pal.",
+"type": "dialogue"
+},
+"12": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "12",
+"next_id": "13",
+"tags": PackedStringArray(),
+"text": "It wasn't just an ordinary letter, for in it, he asked for her hand in marriage, inviting her to come to the bustling city to join him and start a life together.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It wasn't just an ordinary letter, for in it, he asked for her hand in marriage, inviting her to come to the bustling city to join him and start a life together.",
+"type": "dialogue"
+},
+"13": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "13",
+"next_id": "14",
+"tags": PackedStringArray(),
+"text": "My sister was a bundle of nerves and excitement when I suggested that we go to the city for that extended visit.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "My sister was a bundle of nerves and excitement when I suggested that we go to the city for that extended visit.",
+"type": "dialogue"
+},
+"14": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "15",
+"tags": PackedStringArray(),
+"text": "On one hand, she was thrilled at the prospect of leaving our home in the village, but on the other hand, she was terrified to leave her parents behind.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "On one hand, she was thrilled at the prospect of leaving our home in the village, but on the other hand, she was terrified to leave her parents behind.",
+"type": "dialogue"
+},
+"15": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "17",
+"tags": PackedStringArray(),
+"text": "Her pen pal had invited her multiple times, yet she still refused every time. In my eyes, fear seemed to be stopping her from accepting the invitation.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Her pen pal had invited her multiple times, yet she still refused every time. In my eyes, fear seemed to be stopping her from accepting the invitation.",
+"type": "dialogue"
+},
+"17": {
+"id": "17",
+"next_id": "18",
+"next_id_after": "23",
+"responses": PackedStringArray("17", "20"),
+"tags": PackedStringArray(),
+"text": "Maybe she didn't want to abandon your elderly parents?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Maybe she didn't want to abandon your elderly parents?",
+"type": "response"
+},
+"18": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "18",
+"next_id": "19",
+"parent_id": "17",
+"tags": PackedStringArray(),
+"text": "I didn't want to believe that she actually preferred life in the village.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I didn't want to believe that she actually preferred life in the village.",
+"type": "dialogue"
+},
+"19": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "19",
+"next_id": "23",
+"parent_id": "17",
+"tags": PackedStringArray(),
+"text": "On the one hand, it was a simple and quiet existence, but on the other hand, it meant she had given up that great, wonderful chance to have happiness in the city.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "On the one hand, it was a simple and quiet existence, but on the other hand, it meant she had given up that great, wonderful chance to have happiness in the city.",
+"type": "dialogue"
+},
+"20": {
+"id": "20",
+"next_id": "21",
+"next_id_after": "23",
+"tags": PackedStringArray(),
+"text": "......",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "......",
+"type": "response"
+},
+"21": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "21",
+"next_id": "23",
+"parent_id": "20",
+"tags": PackedStringArray(),
+"text": "Maybe she had been bound to this village by the responsibility of our aging parents.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Maybe she had been bound to this village by the responsibility of our aging parents.",
+"type": "dialogue"
+},
+"23": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "23",
+"next_id": "24",
+"tags": PackedStringArray(),
+"text": "But I had to seize this opportunity, regardless of whether it should have been my sister's, no matter the cost. Anyone shouldn't pass up the chance to go to the city.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "But I had to seize this opportunity, regardless of whether it should have been my sister's, no matter the cost. Anyone shouldn't pass up the chance to go to the city.",
+"type": "dialogue"
+},
+"24": {
+"id": "24",
+"next_id": "25",
+"next_id_after": "43",
+"responses": PackedStringArray("24", "32"),
+"tags": PackedStringArray(),
+"text": "Did you mean you took your sister's place?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Did you mean you took your sister's place?",
+"type": "response"
+},
+"25": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "25",
+"next_id": "26",
+"parent_id": "24",
+"tags": PackedStringArray(),
+"text": "Your insight is uncanny, your grace.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Your insight is uncanny, your grace.",
+"type": "dialogue"
+},
+"26": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "26",
+"next_id": "27",
+"parent_id": "24",
+"tags": PackedStringArray(),
+"text": "Yes, I grasped that proposal letter in my hand and marched all the way here to this city, determined to make a new life for myself.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes, I grasped that proposal letter in my hand and marched all the way here to this city, determined to make a new life for myself.",
+"type": "dialogue"
+},
+"27": {
+"id": "27",
+"next_id": "28",
+"next_id_after": "43",
+"parent_id": "24",
+"responses": PackedStringArray("27", "29"),
+"tags": PackedStringArray(),
+"text": "So... did you mean you steal the letter?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "So... did you mean you steal the letter?",
+"type": "response"
+},
+"28": {
+"id": "28",
+"is_snippet": false,
+"next_id": "43",
+"parent_id": "27",
+"type": "goto"
+},
+"29": {
+"id": "29",
+"next_id": "30",
+"next_id_after": "43",
+"parent_id": "24",
+"tags": PackedStringArray(),
+"text": "Did you really steal your sister's life with no remorse, no regret?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Did you really steal your sister's life with no remorse, no regret?",
+"type": "response"
+},
+"3": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"tags": PackedStringArray(),
+"text": "It is simpler to express oneself in a comforting space like this.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It is simpler to express oneself in a comforting space like this.",
+"type": "dialogue"
+},
+"30": {
+"id": "30",
+"is_snippet": false,
+"next_id": "43",
+"parent_id": "29",
+"type": "goto"
+},
+"32": {
+"id": "32",
+"next_id": "33",
+"next_id_after": "43",
+"tags": PackedStringArray(),
+"text": "Anyone?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Anyone?",
+"type": "response"
+},
+"33": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "33",
+"next_id": "34",
+"parent_id": "32",
+"tags": PackedStringArray(),
+"text": "Her pen pal actually didn’t know what she looked like. With that proposal letter in hand, anyone could impersonate her.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Her pen pal actually didn’t know what she looked like. With that proposal letter in hand, anyone could impersonate her.",
+"type": "dialogue"
+},
+"34": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "34",
+"next_id": "35",
+"parent_id": "32",
+"tags": PackedStringArray(),
+"text": "I knew it was risky, but I couldn’t turn down this opportunity.[shake rate=5 level=5]So why not me[/shake]?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I knew it was risky, but I couldn’t turn down this opportunity.[shake rate=5 level=5]So why not me[/shake]?",
+"type": "dialogue"
+},
+"35": {
+"id": "35",
+"next_id": "36",
+"next_id_after": "43",
+"parent_id": "32",
+"responses": PackedStringArray("35", "37"),
+"tags": PackedStringArray(),
+"text": "You mean you stole it",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You mean you stole it",
+"type": "response"
+},
+"36": {
+"id": "36",
+"is_snippet": false,
+"next_id": "43",
+"parent_id": "35",
+"type": "goto"
+},
+"37": {
+"id": "37",
+"next_id": "38",
+"next_id_after": "43",
+"parent_id": "32",
+"tags": PackedStringArray(),
+"text": "So you brought that letter here?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "So you brought that letter here?",
+"type": "response"
+},
+"38": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "38",
+"next_id": "39",
+"parent_id": "37",
+"tags": PackedStringArray(),
+"text": "Yes.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes.",
+"type": "dialogue"
+},
+"39": {
+"id": "39",
+"is_snippet": false,
+"next_id": "64",
+"parent_id": "37",
+"type": "goto"
+},
+"4": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"tags": PackedStringArray(),
+"text": "Of course. Without any judgement, I'm here just to lend an ear and support you.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Of course. Without any judgement, I'm here just to lend an ear and support you.",
+"type": "dialogue"
+},
+"42": {
+"id": "42",
+"next_id": "43",
+"text": "granny_3_1",
+"type": "title"
+},
+"43": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "43",
+"next_id": "44",
+"tags": PackedStringArray(),
+"text": "I know you'd pick up on what I was saying, but I didn't expect you to use a word as [shake rate=20 level=10]stole[/shake].. such an accusation.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I know you'd pick up on what I was saying, but I didn't expect you to use a word as [shake rate=20 level=10]stole[/shake].. such an accusation.",
+"type": "dialogue"
+},
+"44": {
+"id": "44",
+"next_id": "45",
+"next_id_after": "64",
+"responses": PackedStringArray("44", "58"),
+"tags": PackedStringArray(),
+"text": "The Almighty won't forgive such theft",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The Almighty won't forgive such theft",
+"type": "response"
+},
+"45": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "45",
+"next_id": "46",
+"parent_id": "44",
+"tags": PackedStringArray(),
+"text": "OH No...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "OH No...",
+"type": "dialogue"
+},
+"46": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "46",
+"next_id": "47",
+"parent_id": "44",
+"tags": PackedStringArray(),
+"text": "It appears the Lord no longer grants me an audience; I have nothing left to say.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It appears the Lord no longer grants me an audience; I have nothing left to say.",
+"type": "dialogue"
+},
+"47": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "47",
+"next_id": "48",
+"parent_id": "44",
+"tags": PackedStringArray(),
+"text": "This is what you deserve, you outright thief!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "This is what you deserve, you outright thief!",
+"type": "dialogue"
+},
+"48": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "48",
+"next_id": "49",
+"parent_id": "44",
+"tags": PackedStringArray(),
+"text": "...[wait=1][shake rate=5 level=5]If the Lord can never absolve this sin, how can I ever be forgiven?[/shake]...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "...[wait=1][shake rate=5 level=5]If the Lord can never absolve this sin, how can I ever be forgiven?[/shake]...",
+"type": "dialogue"
+},
+"49": {
+"id": "49",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "value"
+}, {
+"type": "assignment",
+"value": "-="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "50",
+"parent_id": "44",
+"type": "mutation"
+},
+"5": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"tags": PackedStringArray(),
+"text": "For most of my life, I had been part of a small community south of the city. My parents and sister were my entire world.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "For most of my life, I had been part of a small community south of the city. My parents and sister were my entire world.",
+"type": "dialogue"
+},
+"50": {
+"id": "50",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "emit",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "value_changed"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "value"
+}])])
+}])
+},
+"next_id": "51",
+"parent_id": "44",
+"type": "mutation"
+},
+"51": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "51",
+"next_id": "52",
+"parent_id": "44",
+"tags": PackedStringArray(),
+"text": "The elderly lady slowly stands up.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The elderly lady slowly stands up.",
+"type": "dialogue"
+},
+"52": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "52",
+"next_id": "53",
+"parent_id": "44",
+"tags": PackedStringArray(),
+"text": "The door swings open, and she walks out. The sound is solid and resonant. You know she has left because the sounds change from normal to empty.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The door swings open, and she walks out. The sound is solid and resonant. You know she has left because the sounds change from normal to empty.",
+"type": "dialogue"
+},
+"53": {
+"id": "53",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "finish_granny"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "54",
+"parent_id": "44",
+"type": "mutation"
+},
+"54": {
+"id": "54",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "emit",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "_finish_granny"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "finish_granny"
+}])])
+}])
+},
+"next_id": "55",
+"parent_id": "44",
+"type": "mutation"
+},
+"55": {
+"id": "55",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "44",
+"type": "goto"
+},
+"58": {
+"id": "58",
+"next_id": "59",
+"next_id_after": "64",
+"tags": PackedStringArray(),
+"text": "No, I apologize for my rash words",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No, I apologize for my rash words",
+"type": "response"
+},
+"59": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "59",
+"next_id": "60",
+"parent_id": "58",
+"tags": PackedStringArray(),
+"text": "I'm here and ready to listen. Please take your time and tell me everything.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I'm here and ready to listen. Please take your time and tell me everything.",
+"type": "dialogue"
+},
+"6": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"tags": PackedStringArray(),
+"text": "The village was quiet and the air had a fresh piney scent. Tiny birds hopped along the dirt thoroughfares and snow-flecked chickens pecked at the ground for seeds and berries.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The village was quiet and the air had a fresh piney scent. Tiny birds hopped along the dirt thoroughfares and snow-flecked chickens pecked at the ground for seeds and berries.",
+"type": "dialogue"
+},
+"60": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "60",
+"next_id": "61",
+"parent_id": "58",
+"tags": PackedStringArray(),
+"text": "Thank you.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Thank you.",
+"type": "dialogue"
+},
+"61": {
+"id": "61",
+"is_snippet": false,
+"next_id": "64",
+"parent_id": "58",
+"type": "goto"
+},
+"63": {
+"id": "63",
+"next_id": "64",
+"text": "granny_3_2",
+"type": "title"
+},
+"64": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "64",
+"next_id": "65",
+"tags": PackedStringArray(),
+"text": "After I left the village for the city, I changed my ways to emulate my sister. I married the man she was supposed to marry.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "After I left the village for the city, I changed my ways to emulate my sister. I married the man she was supposed to marry.",
+"type": "dialogue"
+},
+"65": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "65",
+"next_id": "66",
+"tags": PackedStringArray(),
+"text": "City life was unlike anything I had ever known before. Despite our family being built on [shake rate=20 level=10]a sinful lie[/shake], we found contentment in all that life had to offer.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "City life was unlike anything I had ever known before. Despite our family being built on [shake rate=20 level=10]a sinful lie[/shake], we found contentment in all that life had to offer.",
+"type": "dialogue"
+},
+"66": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "66",
+"next_id": "67",
+"tags": PackedStringArray(),
+"text": "Yet, deep down, I'm haunted by guilt over abandoning my own family and deceiving my husband from long ago.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yet, deep down, I'm haunted by guilt over abandoning my own family and deceiving my husband from long ago.",
+"type": "dialogue"
+},
+"67": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "67",
+"next_id": "68",
+"tags": PackedStringArray(),
+"text": "How could I have been so selfish? How could I have forgotten about her?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "How could I have been so selfish? How could I have forgotten about her?",
+"type": "dialogue"
+},
+"68": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "68",
+"next_id": "69",
+"tags": PackedStringArray(),
+"text": "Have her past years been filled with joy and bliss, while I [shake rate=20 level=10]stole[/shake] her life-changing chance...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Have her past years been filled with joy and bliss, while I [shake rate=20 level=10]stole[/shake] her life-changing chance...",
+"type": "dialogue"
+},
+"69": {
+"id": "69",
+"next_id": "70",
+"next_id_after": "70",
+"responses": PackedStringArray("69"),
+"tags": PackedStringArray(),
+"text": "Maybe you can start by writing her a letter",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Maybe you can start by writing her a letter",
+"type": "response"
+},
+"7": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "7",
+"next_id": "8",
+"tags": PackedStringArray(),
+"text": "But I prefer cities where everything is in a flurry of activity--where the pace quickens and people are constantly bustling around.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "But I prefer cities where everything is in a flurry of activity--where the pace quickens and people are constantly bustling around.",
+"type": "dialogue"
+},
+"70": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "70",
+"next_id": "71",
+"tags": PackedStringArray(),
+"text": "Maybe you can start by writing her a letter, to attempt to reconnect with her.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Maybe you can start by writing her a letter, to attempt to reconnect with her.",
+"type": "dialogue"
+},
+"71": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "71",
+"next_id": "72",
+"tags": PackedStringArray(),
+"text": "I know it's been difficult, but expressing your thoughts and feelings could be a great way to rebuild the relationship you both used to have.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I know it's been difficult, but expressing your thoughts and feelings could be a great way to rebuild the relationship you both used to have.",
+"type": "dialogue"
+},
+"72": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "72",
+"next_id": "73",
+"tags": PackedStringArray(),
+"text": "It's been a long time since I last heard from her, and I can't be sure if she's still there.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It's been a long time since I last heard from her, and I can't be sure if she's still there.",
+"type": "dialogue"
+},
+"73": {
+"id": "73",
+"next_id": "74",
+"next_id_after": "end!",
+"responses": PackedStringArray("73", "78"),
+"tags": PackedStringArray(),
+"text": "It's always worth a try",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It's always worth a try",
+"type": "response"
+},
+"74": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "74",
+"next_id": "75",
+"parent_id": "73",
+"tags": PackedStringArray(),
+"text": "I can't deny that I should write a letter to her, yet it's not easy for me.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I can't deny that I should write a letter to her, yet it's not easy for me.",
+"type": "dialogue"
+},
+"75": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "75",
+"next_id": "76",
+"parent_id": "73",
+"tags": PackedStringArray(),
+"text": "Your grace, I'm grateful for your advice, but I'm afraid I won't be able to put my feelings on paper.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Your grace, I'm grateful for your advice, but I'm afraid I won't be able to put my feelings on paper.",
+"type": "dialogue"
+},
+"76": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "76",
+"next_id": "77",
+"parent_id": "73",
+"tags": PackedStringArray(),
+"text": "...But, still appreciate you. Amen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "...But, still appreciate you. Amen.",
+"type": "dialogue"
+},
+"77": {
+"id": "77",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "73",
+"type": "goto"
+},
+"78": {
+"id": "78",
+"next_id": "79",
+"next_id_after": "end!",
+"tags": PackedStringArray(),
+"text": "Let me offer a helping hand to find your sister",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Let me offer a helping hand to find your sister",
+"type": "response"
+},
+"79": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "79",
+"next_id": "80",
+"parent_id": "78",
+"tags": PackedStringArray(),
+"text": "I can contact with the Bishop of the parish situated in the village, who can guide us towards more information.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I can contact with the Bishop of the parish situated in the village, who can guide us towards more information.",
+"type": "dialogue"
+},
+"8": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"tags": PackedStringArray(),
+"text": "Sadly, we couldn't afford to move to the city.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Sadly, we couldn't afford to move to the city.",
+"type": "dialogue"
+},
+"80": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "80",
+"next_id": "81",
+"parent_id": "78",
+"tags": PackedStringArray(),
+"text": "Don't worry; we'll figure this out together.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Don't worry; we'll figure this out together.",
+"type": "dialogue"
+},
+"81": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "81",
+"next_id": "82",
+"parent_id": "78",
+"tags": PackedStringArray(),
+"text": "That would be wonderful. Thank you, your grace! Amen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "That would be wonderful. Thank you, your grace! Amen.",
+"type": "dialogue"
+},
+"82": {
+"id": "82",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "value"
+}, {
+"type": "assignment",
+"value": "+="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "83",
+"parent_id": "78",
+"type": "mutation"
+},
+"83": {
+"id": "83",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "emit",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "value_changed"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "value"
+}])])
+}])
+},
+"next_id": "84",
+"parent_id": "78",
+"type": "mutation"
+},
+"84": {
+"id": "84",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "finish_granny"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 2
+}])
+},
+"next_id": "85",
+"parent_id": "78",
+"type": "mutation"
+},
+"85": {
+"id": "85",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "emit",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "_finish_granny"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "finish_granny"
+}])])
+}])
+},
+"next_id": "86",
+"parent_id": "78",
+"type": "mutation"
+},
+"86": {
+"id": "86",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "78",
+"type": "goto"
+},
+"9": {
+"character": "Elder Lady",
+"character_replacements": Array[Dictionary]([]),
+"id": "9",
+"next_id": "10",
+"tags": PackedStringArray(),
+"text": "Days went by, and I watched the road leaving the village, dreaming the citylifes, and wondering about my sister. She had turned eighteen and had reached the age to marry.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Days went by, and I watched the road leaving the village, dreaming the citylifes, and wondering about my sister. She had turned eighteen and had reached the age to marry.",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.25.1"

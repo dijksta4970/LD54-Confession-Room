@@ -1,0 +1,30 @@
+[gd_scene load_steps=7 format=3 uid="uid://df68h8iefbavj"]
+
+[ext_resource type="PackedScene" uid="uid://by3tf2dmmpg8y" path="res://scenes/room/inroom_girl.tscn" id="1_0yj4j"]
+[ext_resource type="Script" path="res://scenes/room/confession_girl.gd" id="1_nfigu"]
+[ext_resource type="PackedScene" uid="uid://bvh6k6dldbon7" path="res://scenes/UI/Conversation_start.tscn" id="2_ys4cn"]
+[ext_resource type="PackedScene" uid="uid://daiad5trt3kae" path="res://scenes/helper/confession_balloon_start.tscn" id="3_thwv0"]
+[ext_resource type="Resource" uid="uid://4y1hlu6ft8sw" path="res://dialogue/girl_2.dialogue" id="4_0gaxr"]
+[ext_resource type="PackedScene" uid="uid://ccsod1wsokn2l" path="res://scenes/helper/transition.tscn" id="6_1lt2r"]
+
+[node name="confession_Girl" type="Node2D"]
+script = ExtResource("1_nfigu")
+
+[node name="inroomGirl" parent="." instance=ExtResource("1_0yj4j")]
+animation = &"2"
+
+[node name="Control" parent="." instance=ExtResource("2_ys4cn")]
+offset_left = 475.0
+offset_top = 253.0
+offset_right = 475.0
+offset_bottom = 253.0
+
+[node name="confession_balloon_start" parent="." instance=ExtResource("3_thwv0")]
+position = Vector2(476, 253)
+dialogue_resource = ExtResource("4_0gaxr")
+
+[node name="transition" parent="." instance=ExtResource("6_1lt2r")]
+
+[connection signal="mouse_entered" from="confession_balloon_start" to="." method="_on_confession_balloon_start_mouse_entered"]
+[connection signal="mouse_exited" from="confession_balloon_start" to="." method="_on_confession_balloon_start_mouse_exited"]
+[connection signal="animation_finished" from="transition" to="." method="_on_transition_animation_finished"]

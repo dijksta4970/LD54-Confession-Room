@@ -1,0 +1,73 @@
+[gd_scene load_steps=12 format=3 uid="uid://dn0omb37yk60k"]
+
+[ext_resource type="Texture2D" uid="uid://bl2qlh723m4on" path="res://assets/elder_lady_walk.png" id="2_wcuso"]
+[ext_resource type="PackedScene" uid="uid://b6d4rucklcn3u" path="res://scenes/helper/action.tscn" id="3_mdh07"]
+[ext_resource type="Texture2D" uid="uid://8eqngr3xwvbi" path="res://assets/elder_lady.png" id="3_r853k"]
+[ext_resource type="Resource" uid="uid://bgs0dn0xnpt60" path="res://dialogue/granny.dialogue" id="4_m7pu3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dvkgd"]
+atlas = ExtResource("2_wcuso")
+region = Rect2(0, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yc707"]
+atlas = ExtResource("2_wcuso")
+region = Rect2(24, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qvhci"]
+atlas = ExtResource("2_wcuso")
+region = Rect2(48, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohcve"]
+atlas = ExtResource("2_wcuso")
+region = Rect2(72, 0, 24, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_08c7p"]
+atlas = ExtResource("3_r853k")
+region = Rect2(0, 0, 24, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8doqp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dvkgd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yc707")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qvhci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ohcve")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_08c7p")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_lbe5g"]
+radius = 4.0
+
+[node name="ElderLady" type="Area2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8doqp")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 4)
+shape = SubResource("CircleShape2D_lbe5g")
+
+[node name="Actionable" parent="." instance=ExtResource("3_mdh07")]
+position = Vector2(0, 8)
+scale = Vector2(0.7, 0.7)
+dialogue_resource = ExtResource("4_m7pu3")

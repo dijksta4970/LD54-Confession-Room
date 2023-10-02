@@ -1,0 +1,114 @@
+[gd_scene load_steps=18 format=3 uid="uid://by3tf2dmmpg8y"]
+
+[ext_resource type="Texture2D" uid="uid://sp6rr5e07etd" path="res://assets/conf_bishop-girl_long.png" id="1_74oqf"]
+[ext_resource type="Texture2D" uid="uid://cu6le3u6ibg57" path="res://assets/conf_bishop-girl_medium.png" id="2_gkv5t"]
+[ext_resource type="Texture2D" uid="uid://84xvot1rgqss" path="res://assets/conf_bishop-girl_short.png" id="3_301ai"]
+[ext_resource type="Script" path="res://scenes/room/inroom_old_lady.gd" id="4_4j14i"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xaqsr"]
+atlas = ExtResource("3_301ai")
+region = Rect2(0, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wympv"]
+atlas = ExtResource("3_301ai")
+region = Rect2(660, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fil1j"]
+atlas = ExtResource("3_301ai")
+region = Rect2(1320, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vamiy"]
+atlas = ExtResource("3_301ai")
+region = Rect2(1980, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lb528"]
+atlas = ExtResource("2_gkv5t")
+region = Rect2(0, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gakb0"]
+atlas = ExtResource("2_gkv5t")
+region = Rect2(660, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmlxs"]
+atlas = ExtResource("2_gkv5t")
+region = Rect2(1320, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ljco"]
+atlas = ExtResource("2_gkv5t")
+region = Rect2(1980, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nn8no"]
+atlas = ExtResource("1_74oqf")
+region = Rect2(0, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7rdb2"]
+atlas = ExtResource("1_74oqf")
+region = Rect2(660, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o86t3"]
+atlas = ExtResource("1_74oqf")
+region = Rect2(1320, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_orv1r"]
+atlas = ExtResource("1_74oqf")
+region = Rect2(1980, 0, 660, 340)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vmtxa"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xaqsr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wympv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fil1j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vamiy")
+}],
+"loop": true,
+"name": &"0",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lb528")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gakb0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lmlxs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ljco")
+}],
+"loop": true,
+"name": &"1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nn8no")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7rdb2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o86t3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_orv1r")
+}],
+"loop": true,
+"name": &"2",
+"speed": 8.0
+}]
+
+[node name="inroomGirl" type="AnimatedSprite2D"]
+position = Vector2(330, 170)
+sprite_frames = SubResource("SpriteFrames_vmtxa")
+animation = &"1"
+script = ExtResource("4_4j14i")

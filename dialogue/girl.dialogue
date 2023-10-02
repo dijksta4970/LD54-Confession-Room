@@ -1,0 +1,32 @@
+~ start
+
+if met_girl_out == false:
+	The little girl fidgeted with her skirt, her eyes darting around the room. 
+	A sense of unease radiated from her small frame as she attempted to hide behind a nearby chair. 
+	Her eyes were slightly red from crying, but she was doing her best to hold back her tears.
+	set met_girl_out = true
+	Me: [[Greetings|Howdy|Hi]], young one. 
+	- What brings you here? Are you also here to make a confession?
+		Young Girl: Yes...
+		Me: Then please come this way.
+		do emit("_start_girl")
+		=> END
+	- What's bothering you, little one? How can I help you?
+		Young Girl: The confession room..perhaps its a better place to be.
+		- Okay then, please come with me.
+			do emit("_start_girl")
+			=> END
+		- I apologize, but I cannot allow anyone under the age of 18 to enter the confessional.
+			=> END
+	- Sorry sweetheart, we are not allowing children today; please come back again.
+		set value -= 1
+		do emit("value_changed", value)
+		=> END
+if met_girl_out == true:
+	Young Girl: Please...
+	- Okay, let me help you.
+	- The confessional is not open to minors.
+		set value -= 1
+		do emit("value_changed", value)
+
+=> END

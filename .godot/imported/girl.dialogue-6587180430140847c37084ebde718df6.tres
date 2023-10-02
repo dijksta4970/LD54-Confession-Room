@@ -1,0 +1,396 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_asedo"]
+
+[resource]
+script = ExtResource("1_asedo")
+titles = {
+"start": "3"
+}
+character_names = PackedStringArray("Me", "Young Girl")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"10": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "10",
+"next_id": "11",
+"parent_id": "9",
+"tags": PackedStringArray(),
+"text": "Yes...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes...",
+"type": "dialogue"
+},
+"11": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "11",
+"next_id": "12",
+"parent_id": "9",
+"tags": PackedStringArray(),
+"text": "Then please come this way.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Then please come this way.",
+"type": "dialogue"
+},
+"12": {
+"id": "12",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "emit",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "_start_girl"
+}])])
+}])
+},
+"next_id": "13",
+"parent_id": "9",
+"type": "mutation"
+},
+"13": {
+"id": "13",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "9",
+"type": "goto"
+},
+"14": {
+"id": "14",
+"next_id": "15",
+"next_id_after": "25",
+"parent_id": "3",
+"tags": PackedStringArray(),
+"text": "What's bothering you, little one? How can I help you?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What's bothering you, little one? How can I help you?",
+"type": "response"
+},
+"15": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "15",
+"next_id": "16",
+"parent_id": "14",
+"tags": PackedStringArray(),
+"text": "The confession room..perhaps its a better place to be.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The confession room..perhaps its a better place to be.",
+"type": "dialogue"
+},
+"16": {
+"id": "16",
+"next_id": "17",
+"next_id_after": "25",
+"parent_id": "14",
+"responses": PackedStringArray("16", "19"),
+"tags": PackedStringArray(),
+"text": "Okay then, please come with me.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Okay then, please come with me.",
+"type": "response"
+},
+"17": {
+"id": "17",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "emit",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "_start_girl"
+}])])
+}])
+},
+"next_id": "18",
+"parent_id": "16",
+"type": "mutation"
+},
+"18": {
+"id": "18",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "16",
+"type": "goto"
+},
+"19": {
+"id": "19",
+"next_id": "20",
+"next_id_after": "25",
+"parent_id": "14",
+"tags": PackedStringArray(),
+"text": "I apologize, but I cannot allow anyone under the age of 18 to enter the confessional.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I apologize, but I cannot allow anyone under the age of 18 to enter the confessional.",
+"type": "response"
+},
+"20": {
+"id": "20",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "19",
+"type": "goto"
+},
+"21": {
+"id": "21",
+"next_id": "22",
+"next_id_after": "25",
+"parent_id": "3",
+"tags": PackedStringArray(),
+"text": "Sorry sweetheart, we are not allowing children today; please come back again.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Sorry sweetheart, we are not allowing children today; please come back again.",
+"type": "response"
+},
+"22": {
+"id": "22",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "value"
+}, {
+"type": "assignment",
+"value": "-="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "23",
+"parent_id": "21",
+"type": "mutation"
+},
+"23": {
+"id": "23",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "emit",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "value_changed"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "value"
+}])])
+}])
+},
+"next_id": "24",
+"parent_id": "21",
+"type": "mutation"
+},
+"24": {
+"id": "24",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "21",
+"type": "goto"
+},
+"25": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "met_girl_out"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": true
+}, {
+"type": "colon"
+}])
+},
+"id": "25",
+"next_conditional_id": "32",
+"next_id": "26",
+"next_id_after": "32",
+"type": "condition"
+},
+"26": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "26",
+"next_id": "27",
+"parent_id": "25",
+"tags": PackedStringArray(),
+"text": "Please...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Please...",
+"type": "dialogue"
+},
+"27": {
+"id": "27",
+"next_id": "32",
+"next_id_after": "32",
+"parent_id": "25",
+"responses": PackedStringArray("27", "28"),
+"tags": PackedStringArray(),
+"text": "Okay, let me help you.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Okay, let me help you.",
+"type": "response"
+},
+"28": {
+"id": "28",
+"next_id": "29",
+"next_id_after": "32",
+"parent_id": "25",
+"tags": PackedStringArray(),
+"text": "The confessional is not open to minors.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The confessional is not open to minors.",
+"type": "response"
+},
+"29": {
+"id": "29",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "value"
+}, {
+"type": "assignment",
+"value": "-="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "30",
+"parent_id": "28",
+"type": "mutation"
+},
+"3": {
+"condition": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "met_girl_out"
+}, {
+"type": "comparison",
+"value": "=="
+}, {
+"type": "bool",
+"value": false
+}, {
+"type": "colon"
+}])
+},
+"id": "3",
+"next_conditional_id": "25",
+"next_id": "4",
+"next_id_after": "25",
+"type": "condition"
+},
+"30": {
+"id": "30",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "emit",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "value_changed"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "value"
+}])])
+}])
+},
+"next_id": "32",
+"parent_id": "28",
+"type": "mutation"
+},
+"32": {
+"id": "32",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"4": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"parent_id": "3",
+"tags": PackedStringArray(),
+"text": "The little girl fidgeted with her skirt, her eyes darting around the room.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The little girl fidgeted with her skirt, her eyes darting around the room.",
+"type": "dialogue"
+},
+"5": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"parent_id": "3",
+"tags": PackedStringArray(),
+"text": "A sense of unease radiated from her small frame as she attempted to hide behind a nearby chair.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "A sense of unease radiated from her small frame as she attempted to hide behind a nearby chair.",
+"type": "dialogue"
+},
+"6": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"parent_id": "3",
+"tags": PackedStringArray(),
+"text": "Her eyes were slightly red from crying, but she was doing her best to hold back her tears.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Her eyes were slightly red from crying, but she was doing her best to hold back her tears.",
+"type": "dialogue"
+},
+"7": {
+"id": "7",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "met_girl_out"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "bool",
+"value": true
+}])
+},
+"next_id": "8",
+"parent_id": "3",
+"type": "mutation"
+},
+"8": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "8",
+"next_id": "9",
+"parent_id": "3",
+"tags": PackedStringArray(),
+"text": "[[Greetings|Howdy|Hi]], young one.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[[Greetings|Howdy|Hi]], young one.",
+"type": "dialogue"
+},
+"9": {
+"id": "9",
+"next_id": "10",
+"next_id_after": "25",
+"parent_id": "3",
+"responses": PackedStringArray("9", "14", "21"),
+"tags": PackedStringArray(),
+"text": "What brings you here? Are you also here to make a confession?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What brings you here? Are you also here to make a confession?",
+"type": "response"
+}
+}
+metadata/dialogue_manager_version = "2.25.1"

@@ -1,0 +1,114 @@
+[gd_scene load_steps=18 format=3 uid="uid://ca3p3qnqabp4t"]
+
+[ext_resource type="Texture2D" uid="uid://cj3lx57one38f" path="res://assets/conf_bishop-lady_long.png" id="1_sk8ue"]
+[ext_resource type="Texture2D" uid="uid://brqfc60i7glkm" path="res://assets/conf_bishop-lady_medium.png" id="2_l2vd1"]
+[ext_resource type="Texture2D" uid="uid://d2e7ccljuneiv" path="res://assets/conf_bishop-lady_short.png" id="3_1yn6c"]
+[ext_resource type="Script" path="res://scenes/room/inroom_old_lady.gd" id="4_7ltgo"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_me2oj"]
+atlas = ExtResource("3_1yn6c")
+region = Rect2(0, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xpk5c"]
+atlas = ExtResource("3_1yn6c")
+region = Rect2(660, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fc8p"]
+atlas = ExtResource("3_1yn6c")
+region = Rect2(1320, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nxwus"]
+atlas = ExtResource("3_1yn6c")
+region = Rect2(1980, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gvui5"]
+atlas = ExtResource("2_l2vd1")
+region = Rect2(0, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a12r5"]
+atlas = ExtResource("2_l2vd1")
+region = Rect2(660, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_85swu"]
+atlas = ExtResource("2_l2vd1")
+region = Rect2(1320, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yp76w"]
+atlas = ExtResource("2_l2vd1")
+region = Rect2(1980, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r5aah"]
+atlas = ExtResource("1_sk8ue")
+region = Rect2(0, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6led1"]
+atlas = ExtResource("1_sk8ue")
+region = Rect2(660, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7gvmr"]
+atlas = ExtResource("1_sk8ue")
+region = Rect2(1320, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpgjp"]
+atlas = ExtResource("1_sk8ue")
+region = Rect2(1980, 0, 660, 340)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gju51"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_me2oj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xpk5c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fc8p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nxwus")
+}],
+"loop": true,
+"name": &"0",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gvui5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a12r5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_85swu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yp76w")
+}],
+"loop": true,
+"name": &"1",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r5aah")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6led1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7gvmr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dpgjp")
+}],
+"loop": true,
+"name": &"2",
+"speed": 8.0
+}]
+
+[node name="OldLady" type="AnimatedSprite2D"]
+position = Vector2(330, 170)
+sprite_frames = SubResource("SpriteFrames_gju51")
+animation = &"0"
+script = ExtResource("4_7ltgo")

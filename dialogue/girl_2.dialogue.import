@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_10"
+type="Resource"
+uid="uid://4y1hlu6ft8sw"
+path="res://.godot/imported/girl_2.dialogue-bb2dd51231da82af8b5a978fa746b478.tres"
+
+[deps]
+
+source_file="res://dialogue/girl_2.dialogue"
+dest_files=["res://.godot/imported/girl_2.dialogue-bb2dd51231da82af8b5a978fa746b478.tres"]
+
+[params]
+
+defaults=true

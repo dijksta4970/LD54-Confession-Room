@@ -1,0 +1,15 @@
+~ start
+
+Me: What..
+Me: Is that a kid..?
+A little boy, dirty and grimy, lay on the ground. 
+His curly brown hair was matted with dirt and his clothes were torn in fresh places. A puddle of blood gathered under his ear as he flinched and screamed softly before lapsing back into unconsciousness. 
+
+- Save him
+	set value += 1
+	do emit("value_changed", value)
+	do emit("day_0", true)
+- I won't dirty my hands.
+	do emit("day_0", false)
+	
+=> END

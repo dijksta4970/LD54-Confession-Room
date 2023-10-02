@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://bvh6k6dldbon7"]
+
+[ext_resource type="FontFile" uid="uid://5c41wag2lwvb" path="res://assets/fonts/PixelifySans-Bold.ttf" id="1_i6vpf"]
+[ext_resource type="Script" path="res://scenes/UI/Conversation_start.gd" id="1_wsa45"]
+
+[sub_resource type="Theme" id="Theme_n3jse"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_shxer"]
+
+[sub_resource type="Theme" id="Theme_lm537"]
+default_font = ExtResource("1_i6vpf")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+script = ExtResource("1_wsa45")
+
+[node name="TapHereToStart" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = -45.0
+offset_top = -59.0
+offset_right = 48.0
+offset_bottom = 46.0
+theme = SubResource("Theme_n3jse")
+texture = SubResource("ImageTexture_shxer")
+
+[node name="Label" type="Label" parent="TapHereToStart"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.574
+anchor_right = 7.58
+anchor_bottom = 3.773
+offset_left = -109.5
+offset_top = -38.27
+offset_right = -618.94
+offset_bottom = -348.165
+grow_horizontal = 0
+grow_vertical = 0
+theme = SubResource("Theme_lm537")
+text = "Tap the Bible
+to start your listening..."

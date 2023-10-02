@@ -1,0 +1,61 @@
+[gd_scene load_steps=10 format=3 uid="uid://b1coykog6nxcs"]
+
+[ext_resource type="Script" path="res://scenes/outdoor/outdoor.gd" id="1_oqvet"]
+[ext_resource type="PackedScene" uid="uid://cium0q85r8bdd" path="res://scenes/outdoor/outdoorTileMap.tscn" id="1_oyrrm"]
+[ext_resource type="PackedScene" uid="uid://bmqaxf8wy4r21" path="res://scenes/outdoor/outdoor_candle.tscn" id="2_74ws4"]
+[ext_resource type="PackedScene" uid="uid://bhmipu6gcgh21" path="res://scenes/UI/hud.tscn" id="2_wsh5m"]
+[ext_resource type="PackedScene" uid="uid://csb4vkgcd1k60" path="res://scenes/transition/to_in_door.tscn" id="4_wb4vv"]
+[ext_resource type="PackedScene" uid="uid://durbkc2sbehsu" path="res://scenes/player/player.tscn" id="5_p8nry"]
+[ext_resource type="PackedScene" uid="uid://bp3vf2sggiet" path="res://scenes/items/tree.tscn" id="6_s72p4"]
+[ext_resource type="Texture2D" uid="uid://d2h5yyr84uihd" path="res://assets/flower.png" id="7_4i8sc"]
+[ext_resource type="PackedScene" uid="uid://ccsod1wsokn2l" path="res://scenes/helper/transition.tscn" id="9_p3g4l"]
+
+[node name="Outdoor" type="Node2D"]
+script = ExtResource("1_oqvet")
+
+[node name="Outdoor" parent="." instance=ExtResource("1_oyrrm")]
+
+[node name="OutdoorCandle" parent="." instance=ExtResource("2_74ws4")]
+position = Vector2(128, 245)
+scale = Vector2(3, 3)
+
+[node name="OutdoorCandle2" parent="." instance=ExtResource("2_74ws4")]
+position = Vector2(545, 245)
+scale = Vector2(3, 3)
+
+[node name="ToInDoor" parent="." instance=ExtResource("4_wb4vv")]
+position = Vector2(686, 255)
+
+[node name="tree" parent="." instance=ExtResource("6_s72p4")]
+position = Vector2(335, 260)
+scale = Vector2(3, 3)
+
+[node name="Flower" type="Sprite2D" parent="."]
+position = Vector2(75.6, 108.2)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("7_4i8sc")
+
+[node name="Flower2" type="Sprite2D" parent="."]
+position = Vector2(240.6, 108.2)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("7_4i8sc")
+
+[node name="Flower3" type="Sprite2D" parent="."]
+position = Vector2(405.6, 108.2)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("7_4i8sc")
+
+[node name="Flower4" type="Sprite2D" parent="."]
+position = Vector2(570.6, 108.2)
+scale = Vector2(1.3, 1.3)
+texture = ExtResource("7_4i8sc")
+
+[node name="Player" parent="." instance=ExtResource("5_p8nry")]
+position = Vector2(35, 289)
+
+[node name="hud" parent="." instance=ExtResource("2_wsh5m")]
+
+[node name="transition" parent="." instance=ExtResource("9_p3g4l")]
+
+[connection signal="body_entered" from="ToInDoor" to="." method="_on_to_in_door_body_entered"]
+[connection signal="animation_finished" from="transition" to="." method="_on_transition_animation_finished"]

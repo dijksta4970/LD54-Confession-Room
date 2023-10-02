@@ -1,0 +1,166 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_ltxv6"]
+
+[resource]
+script = ExtResource("1_ltxv6")
+titles = {
+"start": "3"
+}
+character_names = PackedStringArray("Me")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"10": {
+"id": "10",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "emit",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "value_changed"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "value"
+}])])
+}])
+},
+"next_id": "11",
+"parent_id": "8",
+"type": "mutation"
+},
+"11": {
+"id": "11",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "emit",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "day_0"
+}]), Array[Dictionary]([{
+"type": "bool",
+"value": true
+}])])
+}])
+},
+"next_id": "15",
+"parent_id": "8",
+"type": "mutation"
+},
+"12": {
+"id": "12",
+"next_id": "13",
+"next_id_after": "15",
+"tags": PackedStringArray(),
+"text": "I won't dirty my hands.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I won't dirty my hands.",
+"type": "response"
+},
+"13": {
+"id": "13",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "emit",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "day_0"
+}]), Array[Dictionary]([{
+"type": "bool",
+"value": false
+}])])
+}])
+},
+"next_id": "15",
+"parent_id": "12",
+"type": "mutation"
+},
+"15": {
+"id": "15",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"3": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"tags": PackedStringArray(),
+"text": "What..",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What..",
+"type": "dialogue"
+},
+"4": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"tags": PackedStringArray(),
+"text": "Is that a kid..?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Is that a kid..?",
+"type": "dialogue"
+},
+"5": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "5",
+"next_id": "6",
+"tags": PackedStringArray(),
+"text": "A little boy, dirty and grimy, lay on the ground.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "A little boy, dirty and grimy, lay on the ground.",
+"type": "dialogue"
+},
+"6": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "8",
+"tags": PackedStringArray(),
+"text": "His curly brown hair was matted with dirt and his clothes were torn in fresh places. A puddle of blood gathered under his ear as he flinched and screamed softly before lapsing back into unconsciousness.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "His curly brown hair was matted with dirt and his clothes were torn in fresh places. A puddle of blood gathered under his ear as he flinched and screamed softly before lapsing back into unconsciousness.",
+"type": "dialogue"
+},
+"8": {
+"id": "8",
+"next_id": "9",
+"next_id_after": "15",
+"responses": PackedStringArray("8", "12"),
+"tags": PackedStringArray(),
+"text": "Save him",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Save him",
+"type": "response"
+},
+"9": {
+"id": "9",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "value"
+}, {
+"type": "assignment",
+"value": "+="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "10",
+"parent_id": "8",
+"type": "mutation"
+}
+}
+metadata/dialogue_manager_version = "2.25.1"

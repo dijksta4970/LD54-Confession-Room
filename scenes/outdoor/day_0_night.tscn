@@ -1,0 +1,60 @@
+[gd_scene load_steps=11 format=3 uid="uid://ckj6fvvmet5qa"]
+
+[ext_resource type="Script" path="res://scenes/outdoor/day_0_night.gd" id="1_6c5l2"]
+[ext_resource type="Texture2D" uid="uid://706qy1gkpgul" path="res://assets/night.png" id="1_6jxin"]
+[ext_resource type="PackedScene" uid="uid://durbkc2sbehsu" path="res://scenes/player/player.tscn" id="3_uefxh"]
+[ext_resource type="PackedScene" uid="uid://b6d4rucklcn3u" path="res://scenes/helper/action.tscn" id="4_re1gi"]
+[ext_resource type="Resource" uid="uid://coybyqnhsypkk" path="res://dialogue/Day0.dialogue" id="5_hsen3"]
+[ext_resource type="PackedScene" uid="uid://ccsod1wsokn2l" path="res://scenes/helper/transition.tscn" id="6_kr7cj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rbfjm"]
+atlas = ExtResource("1_6jxin")
+region = Rect2(0, 0, 660, 340)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_emtcu"]
+atlas = ExtResource("1_6jxin")
+region = Rect2(660, 0, 660, 340)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_caun5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rbfjm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_emtcu")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ac1hf"]
+size = Vector2(39.9063, 16.9844)
+
+[node name="Day0Night" type="Node2D"]
+script = ExtResource("1_6c5l2")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(330, 170)
+sprite_frames = SubResource("SpriteFrames_caun5")
+
+[node name="Player" parent="." instance=ExtResource("3_uefxh")]
+position = Vector2(34, 279)
+
+[node name="Actionable" parent="." instance=ExtResource("4_re1gi")]
+position = Vector2(500, 280)
+scale = Vector2(3, 3)
+dialogue_resource = ExtResource("5_hsen3")
+
+[node name="transition" parent="." instance=ExtResource("6_kr7cj")]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(500, 264)
+shape = SubResource("RectangleShape2D_ac1hf")
+
+[connection signal="animation_finished" from="transition" to="." method="_on_transition_animation_finished"]
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]

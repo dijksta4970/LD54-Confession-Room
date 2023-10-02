@@ -1,0 +1,114 @@
+[gd_scene load_steps=17 format=3 uid="uid://bmqaxf8wy4r21"]
+
+[ext_resource type="Texture2D" uid="uid://c44oe8jf0anc6" path="res://assets/candel_animation.png" id="1_htp3l"]
+[ext_resource type="Script" path="res://scenes/outdoor/outdoor_candle.gd" id="1_tkgb3"]
+[ext_resource type="Texture2D" uid="uid://wxo4dig3t858" path="res://assets/candel_steady.png" id="2_0inth"]
+[ext_resource type="AudioStream" uid="uid://d247pkn2mvrr0" path="res://assets/sound/dengdeng.wav" id="4_ja6xb"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mi8mr"]
+atlas = ExtResource("1_htp3l")
+region = Rect2(0, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yobda"]
+atlas = ExtResource("1_htp3l")
+region = Rect2(16, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kloul"]
+atlas = ExtResource("1_htp3l")
+region = Rect2(32, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vmpcx"]
+atlas = ExtResource("1_htp3l")
+region = Rect2(48, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4ijm5"]
+atlas = ExtResource("1_htp3l")
+region = Rect2(64, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_70u23"]
+atlas = ExtResource("1_htp3l")
+region = Rect2(80, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhimb"]
+atlas = ExtResource("1_htp3l")
+region = Rect2(96, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fehcm"]
+atlas = ExtResource("1_htp3l")
+region = Rect2(112, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mm3fh"]
+atlas = ExtResource("1_htp3l")
+region = Rect2(128, 0, 16, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g36d1"]
+atlas = ExtResource("1_htp3l")
+region = Rect2(144, 0, 16, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cw4tl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mi8mr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yobda")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kloul")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vmpcx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4ijm5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_70u23")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hhimb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fehcm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mm3fh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g36d1")
+}],
+"loop": true,
+"name": &"light",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0inth")
+}],
+"loop": true,
+"name": &"steady",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_luvpm"]
+radius = 6.0
+
+[node name="OutdoorCandle" type="Area2D"]
+collision_layer = 16
+script = ExtResource("1_tkgb3")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_cw4tl")
+animation = &"steady"
+autoplay = "steady"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6)
+shape = SubResource("CircleShape2D_luvpm")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ja6xb")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]

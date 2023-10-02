@@ -1,0 +1,1774 @@
+[gd_resource type="Resource" script_class="DialogueResource" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_resource.gd" id="1_flin0"]
+
+[resource]
+script = ExtResource("1_flin0")
+titles = {
+"girl_3_1": "14",
+"girl_3_2": "33",
+"girl_3_4": "50",
+"girl_3_5": "58",
+"girl_3_6": "81",
+"girl_3_7": "96",
+"girl_3_8": "130",
+"girl_3_9": "142",
+"start": "3"
+}
+character_names = PackedStringArray("Young Girl", "Me")
+first_title = "3"
+lines = {
+"1": {
+"id": "1",
+"next_id": "3",
+"text": "start",
+"type": "title"
+},
+"10": {
+"id": "10",
+"is_snippet": false,
+"next_id": "33",
+"parent_id": "9",
+"type": "goto"
+},
+"100": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "100",
+"next_id": "101",
+"tags": PackedStringArray(),
+"text": "I couldn't help but be surprised by the strange coincidence of it all.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I couldn't help but be surprised by the strange coincidence of it all.",
+"type": "dialogue"
+},
+"101": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "101",
+"next_id": "102",
+"tags": PackedStringArray(),
+"text": "It was near here, close to the church, a place I had visited many times before in my life.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It was near here, close to the church, a place I had visited many times before in my life.",
+"type": "dialogue"
+},
+"102": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "102",
+"next_id": "103",
+"tags": PackedStringArray(),
+"text": "Is the Bakery close to.. here?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Is the Bakery close to.. here?",
+"type": "dialogue"
+},
+"103": {
+"id": "103",
+"next_id": "104",
+"next_id_after": "130",
+"responses": PackedStringArray("103"),
+"tags": PackedStringArray(),
+"text": "What is my brother's appearance?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What is my brother's appearance?",
+"type": "response"
+},
+"104": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "104",
+"next_id": "105",
+"parent_id": "103",
+"tags": PackedStringArray(),
+"text": "Chestnut-colored, curly hair... He was about my height.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Chestnut-colored, curly hair... He was about my height.",
+"type": "dialogue"
+},
+"105": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "105",
+"next_id": "106",
+"parent_id": "103",
+"tags": PackedStringArray(),
+"text": "Why do you ask that? Surely you saw him!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Why do you ask that? Surely you saw him!",
+"type": "dialogue"
+},
+"106": {
+"id": "106",
+"next_id": "107",
+"next_id_after": "130",
+"parent_id": "103",
+"responses": PackedStringArray("106"),
+"tags": PackedStringArray(),
+"text": "Yes, I saw him last night.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Yes, I saw him last night.",
+"type": "response"
+},
+"107": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "107",
+"next_id": "108",
+"parent_id": "106",
+"tags": PackedStringArray(),
+"text": "[shake rate=10 level=5]Where is he?![/shake] Please, tell me now do not keep me in suspense. Hurry!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[shake rate=10 level=5]Where is he?![/shake] Please, tell me now do not keep me in suspense. Hurry!",
+"type": "dialogue"
+},
+"108": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "108",
+"next_id": "109",
+"parent_id": "106",
+"tags": PackedStringArray(),
+"text": "If my brother doesn't come home soon, Mom and Dad will be incredibly worried!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "If my brother doesn't come home soon, Mom and Dad will be incredibly worried!",
+"type": "dialogue"
+},
+"109": {
+"id": "109",
+"next_id": "110",
+"next_id_after": "130",
+"parent_id": "106",
+"responses": PackedStringArray("109", "113", "124"),
+"tags": PackedStringArray(),
+"text": "Tell her",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Tell her",
+"type": "response"
+},
+"110": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "110",
+"next_id": "111",
+"parent_id": "109",
+"tags": PackedStringArray(),
+"text": "Don't worry, he's safe right now.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Don't worry, he's safe right now.",
+"type": "dialogue"
+},
+"111": {
+"id": "111",
+"is_snippet": false,
+"next_id": "130",
+"parent_id": "109",
+"type": "goto"
+},
+"113": {
+"id": "113",
+"next_id": "114",
+"next_id_after": "130",
+"parent_id": "106",
+"tags": PackedStringArray(),
+"text": "Don't tell her",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Don't tell her",
+"type": "response"
+},
+"114": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "114",
+"next_id": "115",
+"parent_id": "113",
+"tags": PackedStringArray(),
+"text": "Don't be panic; he's in a secure location. I will lead you to where he is later on.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Don't be panic; he's in a secure location. I will lead you to where he is later on.",
+"type": "dialogue"
+},
+"115": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "115",
+"next_id": "116",
+"parent_id": "113",
+"tags": PackedStringArray(),
+"text": "I know the effort would be overwhelming for you.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I know the effort would be overwhelming for you.",
+"type": "dialogue"
+},
+"116": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "116",
+"next_id": "117",
+"parent_id": "113",
+"tags": PackedStringArray(),
+"text": "With every second ticking away, I need to bring him home before the sun sets and [shake rate=20 level=10]mom and dad[/shake] wont be driven into a frantic fear.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "With every second ticking away, I need to bring him home before the sun sets and [shake rate=20 level=10]mom and dad[/shake] wont be driven into a frantic fear.",
+"type": "dialogue"
+},
+"117": {
+"id": "117",
+"next_id": "118",
+"next_id_after": "130",
+"parent_id": "113",
+"responses": PackedStringArray("117", "119"),
+"tags": PackedStringArray(),
+"text": "Okay, I will tell you",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Okay, I will tell you",
+"type": "response"
+},
+"118": {
+"id": "118",
+"is_snippet": false,
+"next_id": "130",
+"parent_id": "117",
+"type": "goto"
+},
+"119": {
+"id": "119",
+"next_id": "120",
+"next_id_after": "130",
+"parent_id": "113",
+"tags": PackedStringArray(),
+"text": "Are you in such a hurry?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Are you in such a hurry?",
+"type": "response"
+},
+"120": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "120",
+"next_id": "121",
+"parent_id": "119",
+"tags": PackedStringArray(),
+"text": "Take it easy out there.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Take it easy out there.",
+"type": "dialogue"
+},
+"121": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "121",
+"next_id": "123",
+"parent_id": "119",
+"tags": PackedStringArray(),
+"text": "Or would you like me to tag along with you to the police station?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Or would you like me to tag along with you to the police station?",
+"type": "dialogue"
+},
+"123": {
+"id": "123",
+"is_snippet": false,
+"next_id": "142",
+"parent_id": "119",
+"type": "goto"
+},
+"124": {
+"id": "124",
+"next_id": "126",
+"next_id_after": "130",
+"parent_id": "106",
+"tags": PackedStringArray(),
+"text": "I will call the police for you",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I will call the police for you",
+"type": "response"
+},
+"126": {
+"id": "126",
+"is_snippet": false,
+"next_id": "142",
+"parent_id": "124",
+"type": "goto"
+},
+"128": {
+"id": "128",
+"next_id": "130",
+"text": "girl_3_8",
+"type": "title"
+},
+"13": {
+"id": "13",
+"next_id": "14",
+"text": "girl_3_1",
+"type": "title"
+},
+"130": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "130",
+"next_id": "131",
+"tags": PackedStringArray(),
+"text": "You scribble the address on a scrap of paper.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You scribble the address on a scrap of paper.",
+"type": "dialogue"
+},
+"131": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "131",
+"next_id": "132",
+"tags": PackedStringArray(),
+"text": "Much much appreciated!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Much much appreciated!",
+"type": "dialogue"
+},
+"132": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "132",
+"next_id": "133",
+"tags": PackedStringArray(),
+"text": "I'll head over there and [shake rate=10 level=10]seek him out[/shake] now.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I'll head over there and [shake rate=10 level=10]seek him out[/shake] now.",
+"type": "dialogue"
+},
+"133": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "133",
+"next_id": "134",
+"tags": PackedStringArray(),
+"text": "The young girl's voice trembles a bit.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The young girl's voice trembles a bit.",
+"type": "dialogue"
+},
+"134": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "134",
+"next_id": "135",
+"tags": PackedStringArray(),
+"text": "She's probably excited to find her brother soon.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "She's probably excited to find her brother soon.",
+"type": "dialogue"
+},
+"135": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "135",
+"next_id": "136",
+"tags": PackedStringArray(),
+"text": "You hear her jumping off the chair and running away.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You hear her jumping off the chair and running away.",
+"type": "dialogue"
+},
+"136": {
+"id": "136",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "finish_girl"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 2
+}])
+},
+"next_id": "137",
+"type": "mutation"
+},
+"137": {
+"id": "137",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "emit",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "_finish_girl"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "finish_girl"
+}])])
+}])
+},
+"next_id": "138",
+"type": "mutation"
+},
+"138": {
+"id": "138",
+"is_snippet": false,
+"next_id": "end",
+"type": "goto"
+},
+"14": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "14",
+"next_id": "15",
+"tags": PackedStringArray(),
+"text": "[shake rate=5 level=5]Dad[/shake] hit him. That's why he ran away.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[shake rate=5 level=5]Dad[/shake] hit him. That's why he ran away.",
+"type": "dialogue"
+},
+"140": {
+"id": "140",
+"next_id": "142",
+"text": "girl_3_9",
+"type": "title"
+},
+"142": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "142",
+"next_id": "143",
+"tags": PackedStringArray(),
+"text": "The police will help you.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The police will help you.",
+"type": "dialogue"
+},
+"143": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "143",
+"next_id": "144",
+"tags": PackedStringArray(),
+"text": "[shake rate=20 level=10]NO, don't even try![/shake]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[shake rate=20 level=10]NO, don't even try![/shake]",
+"type": "dialogue"
+},
+"144": {
+"id": "144",
+"next_id": "145",
+"next_id_after": "145",
+"responses": PackedStringArray("144"),
+"tags": PackedStringArray(),
+"text": "......",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "......",
+"type": "response"
+},
+"145": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "145",
+"next_id": "146",
+"tags": PackedStringArray(),
+"text": "You're no help!, at all!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You're no help!, at all!",
+"type": "dialogue"
+},
+"146": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "146",
+"next_id": "147",
+"tags": PackedStringArray(),
+"text": "[shake rate=10 level=5]I have to..[/shake] I will figure it out by myself!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[shake rate=10 level=5]I have to..[/shake] I will figure it out by myself!",
+"type": "dialogue"
+},
+"147": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "147",
+"next_id": "148",
+"tags": PackedStringArray(),
+"text": "The young girl's voice trembles a bit.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The young girl's voice trembles a bit.",
+"type": "dialogue"
+},
+"148": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "148",
+"next_id": "149",
+"tags": PackedStringArray(),
+"text": "Maybe she's too angry with me and feeling emotionally unstable.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Maybe she's too angry with me and feeling emotionally unstable.",
+"type": "dialogue"
+},
+"149": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "149",
+"next_id": "150",
+"tags": PackedStringArray(),
+"text": "You hear her jumping off the chair and running away.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You hear her jumping off the chair and running away.",
+"type": "dialogue"
+},
+"15": {
+"id": "15",
+"next_id": "16",
+"next_id_after": "33",
+"responses": PackedStringArray("15", "27"),
+"tags": PackedStringArray(),
+"text": "We need to contact the police",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "We need to contact the police",
+"type": "response"
+},
+"150": {
+"id": "150",
+"next_id": "151",
+"next_id_after": "end!",
+"responses": PackedStringArray("150", "159", "168"),
+"tags": PackedStringArray(),
+"text": "This is quite suspicious...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "This is quite suspicious...",
+"type": "response"
+},
+"151": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "151",
+"next_id": "152",
+"parent_id": "150",
+"tags": PackedStringArray(),
+"text": "This girl speaks in a contradictory manner, raising suspicions.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "This girl speaks in a contradictory manner, raising suspicions.",
+"type": "dialogue"
+},
+"152": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "152",
+"next_id": "153",
+"parent_id": "150",
+"tags": PackedStringArray(),
+"text": "That boy..",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "That boy..",
+"type": "dialogue"
+},
+"153": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "153",
+"next_id": "154",
+"parent_id": "150",
+"tags": PackedStringArray(),
+"text": "Is the boy I saved yesterday?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Is the boy I saved yesterday?",
+"type": "dialogue"
+},
+"154": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "154",
+"next_id": "155",
+"parent_id": "150",
+"tags": PackedStringArray(),
+"text": "I need to call the police..",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I need to call the police..",
+"type": "dialogue"
+},
+"155": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "155",
+"next_id": "156",
+"parent_id": "150",
+"tags": PackedStringArray(),
+"text": "NOW!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "NOW!",
+"type": "dialogue"
+},
+"156": {
+"id": "156",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "finish_girl"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "157",
+"parent_id": "150",
+"type": "mutation"
+},
+"157": {
+"id": "157",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "emit",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "_finish_girl"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "finish_girl"
+}])])
+}])
+},
+"next_id": "158",
+"parent_id": "150",
+"type": "mutation"
+},
+"158": {
+"id": "158",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "150",
+"type": "goto"
+},
+"159": {
+"id": "159",
+"next_id": "160",
+"next_id_after": "end!",
+"tags": PackedStringArray(),
+"text": "Chase after her",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Chase after her",
+"type": "response"
+},
+"16": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "16",
+"next_id": "17",
+"parent_id": "15",
+"tags": PackedStringArray(),
+"text": "This isn't just a matter of escaping danger; it's about protecting you from your dad's violence.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "This isn't just a matter of escaping danger; it's about protecting you from your dad's violence.",
+"type": "dialogue"
+},
+"160": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "160",
+"next_id": "161",
+"parent_id": "159",
+"tags": PackedStringArray(),
+"text": "Wait!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Wait!",
+"type": "dialogue"
+},
+"161": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "161",
+"next_id": "162",
+"parent_id": "159",
+"tags": PackedStringArray(),
+"text": "Well... let me tell you.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Well... let me tell you.",
+"type": "dialogue"
+},
+"162": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "162",
+"next_id": "163",
+"parent_id": "159",
+"tags": PackedStringArray(),
+"text": "You scribble the address on a scrap of paper.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You scribble the address on a scrap of paper.",
+"type": "dialogue"
+},
+"163": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "163",
+"next_id": "164",
+"parent_id": "159",
+"tags": PackedStringArray(),
+"text": "Much much appreciated!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Much much appreciated!",
+"type": "dialogue"
+},
+"164": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "164",
+"next_id": "165",
+"parent_id": "159",
+"tags": PackedStringArray(),
+"text": "I'll head over there and seek him out now.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I'll head over there and seek him out now.",
+"type": "dialogue"
+},
+"165": {
+"id": "165",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "finish_girl"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 2
+}])
+},
+"next_id": "166",
+"parent_id": "159",
+"type": "mutation"
+},
+"166": {
+"id": "166",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "emit",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "_finish_girl"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "finish_girl"
+}])])
+}])
+},
+"next_id": "167",
+"parent_id": "159",
+"type": "mutation"
+},
+"167": {
+"id": "167",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "159",
+"type": "goto"
+},
+"168": {
+"id": "168",
+"next_id": "169",
+"next_id_after": "end!",
+"tags": PackedStringArray(),
+"text": "Let her go",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Let her go",
+"type": "response"
+},
+"169": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "169",
+"next_id": "170",
+"parent_id": "168",
+"tags": PackedStringArray(),
+"text": "Just let it go.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Just let it go.",
+"type": "dialogue"
+},
+"17": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "17",
+"next_id": "18",
+"parent_id": "15",
+"tags": PackedStringArray(),
+"text": "Honey, I'll help you call the police. We need to find your brother first and then deal with this dad situation.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Honey, I'll help you call the police. We need to find your brother first and then deal with this dad situation.",
+"type": "dialogue"
+},
+"170": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "170",
+"next_id": "171",
+"parent_id": "168",
+"tags": PackedStringArray(),
+"text": "There's plenty of stuff to stress over on a daily basis...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "There's plenty of stuff to stress over on a daily basis...",
+"type": "dialogue"
+},
+"171": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "171",
+"next_id": "172",
+"parent_id": "168",
+"tags": PackedStringArray(),
+"text": "Just head home.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Just head home.",
+"type": "dialogue"
+},
+"172": {
+"id": "172",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "value"
+}, {
+"type": "assignment",
+"value": "-="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "173",
+"parent_id": "168",
+"type": "mutation"
+},
+"173": {
+"id": "173",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "emit",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "value_changed"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "value"
+}])])
+}])
+},
+"next_id": "174",
+"parent_id": "168",
+"type": "mutation"
+},
+"174": {
+"id": "174",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "finish_girl"
+}, {
+"type": "assignment",
+"value": "="
+}, {
+"type": "number",
+"value": 3
+}])
+},
+"next_id": "175",
+"parent_id": "168",
+"type": "mutation"
+},
+"175": {
+"id": "175",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "emit",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "_finish_girl"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "finish_girl"
+}])])
+}])
+},
+"next_id": "176",
+"parent_id": "168",
+"type": "mutation"
+},
+"176": {
+"id": "176",
+"is_snippet": false,
+"next_id": "end",
+"parent_id": "168",
+"type": "goto"
+},
+"18": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "18",
+"next_id": "19",
+"parent_id": "15",
+"tags": PackedStringArray(),
+"text": "I need to ensure your and your brother's safety.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I need to ensure your and your brother's safety.",
+"type": "dialogue"
+},
+"19": {
+"id": "19",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "value"
+}, {
+"type": "assignment",
+"value": "+="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "20",
+"parent_id": "15",
+"type": "mutation"
+},
+"20": {
+"id": "20",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "emit",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "value_changed"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "value"
+}])])
+}])
+},
+"next_id": "21",
+"parent_id": "15",
+"type": "mutation"
+},
+"21": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "21",
+"next_id": "22",
+"parent_id": "15",
+"tags": PackedStringArray(),
+"text": "No, don't call the police...please!!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No, don't call the police...please!!",
+"type": "dialogue"
+},
+"22": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "22",
+"next_id": "23",
+"parent_id": "15",
+"tags": PackedStringArray(),
+"text": "It was all my fault.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It was all my fault.",
+"type": "dialogue"
+},
+"23": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "23",
+"next_id": "24",
+"parent_id": "15",
+"tags": PackedStringArray(),
+"text": "I had told mom that brother snatched her money, but it was me.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I had told mom that brother snatched her money, but it was me.",
+"type": "dialogue"
+},
+"24": {
+"id": "24",
+"next_id": "25",
+"next_id_after": "33",
+"parent_id": "15",
+"responses": PackedStringArray("24"),
+"tags": PackedStringArray(),
+"text": "Oh, so it's you, is it?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Oh, so it's you, is it?",
+"type": "response"
+},
+"25": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "25",
+"next_id": "26",
+"parent_id": "24",
+"tags": PackedStringArray(),
+"text": "Why did you take something that doesn't belong to you?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Why did you take something that doesn't belong to you?",
+"type": "dialogue"
+},
+"26": {
+"id": "26",
+"is_snippet": false,
+"next_id": "58",
+"parent_id": "24",
+"type": "goto"
+},
+"27": {
+"id": "27",
+"next_id": "28",
+"next_id_after": "33",
+"tags": PackedStringArray(),
+"text": "Why did your dad hit him?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Why did your dad hit him?",
+"type": "response"
+},
+"28": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "28",
+"next_id": "29",
+"parent_id": "27",
+"tags": PackedStringArray(),
+"text": "Mama was mad 'cause she believed its brother took her coins, and [shake rate=5 level=5]Papa[/shake] got real grouchy so...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Mama was mad 'cause she believed its brother took her coins, and [shake rate=5 level=5]Papa[/shake] got real grouchy so...",
+"type": "dialogue"
+},
+"29": {
+"id": "29",
+"next_id": "30",
+"next_id_after": "33",
+"parent_id": "27",
+"responses": PackedStringArray("29"),
+"tags": PackedStringArray(),
+"text": "He took mama's money?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "He took mama's money?",
+"type": "response"
+},
+"3": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "3",
+"next_id": "4",
+"tags": PackedStringArray(),
+"text": "My [shake rate=10 level=3]brother[/shake], he's gone! *sobs uncontrollably*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "My [shake rate=10 level=3]brother[/shake], he's gone! *sobs uncontrollably*",
+"type": "dialogue"
+},
+"30": {
+"id": "30",
+"is_snippet": false,
+"next_id": "50",
+"parent_id": "29",
+"type": "goto"
+},
+"32": {
+"id": "32",
+"next_id": "33",
+"text": "girl_3_2",
+"type": "title"
+},
+"33": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "33",
+"next_id": "34",
+"tags": PackedStringArray(),
+"text": "No cops! It was all me! I'm begging you, don't call them!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "No cops! It was all me! I'm begging you, don't call them!",
+"type": "dialogue"
+},
+"34": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "34",
+"next_id": "35",
+"tags": PackedStringArray(),
+"text": "If they come, I'll be thrown in jail - No please! Don't do it!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "If they come, I'll be thrown in jail - No please! Don't do it!",
+"type": "dialogue"
+},
+"35": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "35",
+"next_id": "36",
+"tags": PackedStringArray(),
+"text": "You won't get into trouble here; just tell me slowly.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "You won't get into trouble here; just tell me slowly.",
+"type": "dialogue"
+},
+"36": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "36",
+"next_id": "37",
+"tags": PackedStringArray(),
+"text": "It all begins with me — I'm the one who told mom he stole her money.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It all begins with me — I'm the one who told mom he stole her money.",
+"type": "dialogue"
+},
+"37": {
+"id": "37",
+"next_id": "38",
+"next_id_after": "50",
+"responses": PackedStringArray("37", "39"),
+"tags": PackedStringArray(),
+"text": "Did your brother really take the money?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Did your brother really take the money?",
+"type": "response"
+},
+"38": {
+"id": "38",
+"is_snippet": false,
+"next_id": "50",
+"parent_id": "37",
+"type": "goto"
+},
+"39": {
+"id": "39",
+"next_id": "40",
+"next_id_after": "50",
+"tags": PackedStringArray(),
+"text": "So your mom got angry and kicked your brother out the house?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "So your mom got angry and kicked your brother out the house?",
+"type": "response"
+},
+"4": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "4",
+"next_id": "5",
+"tags": PackedStringArray(),
+"text": "He left without a trace. It's been days, and I can't find him - no matter how much I search! *weeps bitterly*",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "He left without a trace. It's been days, and I can't find him - no matter how much I search! *weeps bitterly*",
+"type": "dialogue"
+},
+"40": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "40",
+"next_id": "41",
+"parent_id": "39",
+"tags": PackedStringArray(),
+"text": "[shake rate=20 level=5]Mom[/shake] was so angry she threw a punch at my brother, and he ran away in fear.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[shake rate=20 level=5]Mom[/shake] was so angry she threw a punch at my brother, and he ran away in fear.",
+"type": "dialogue"
+},
+"41": {
+"id": "41",
+"next_id": "42",
+"next_id_after": "50",
+"parent_id": "39",
+"responses": PackedStringArray("41"),
+"tags": PackedStringArray(),
+"text": "It's not your fault at all",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It's not your fault at all",
+"type": "response"
+},
+"42": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "42",
+"next_id": "43",
+"parent_id": "41",
+"tags": PackedStringArray(),
+"text": "But it was actually...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "But it was actually...",
+"type": "dialogue"
+},
+"43": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "43",
+"next_id": "44",
+"parent_id": "41",
+"tags": PackedStringArray(),
+"text": "me.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "me.",
+"type": "dialogue"
+},
+"44": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "44",
+"next_id": "45",
+"parent_id": "41",
+"tags": PackedStringArray(),
+"text": "It's me. I took mama's coins.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It's me. I took mama's coins.",
+"type": "dialogue"
+},
+"45": {
+"id": "45",
+"next_id": "46",
+"next_id_after": "46",
+"parent_id": "41",
+"responses": PackedStringArray("45"),
+"tags": PackedStringArray(),
+"text": "Oh it's you.. Why did you do that, sweetie?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Oh it's you.. Why did you do that, sweetie?",
+"type": "response"
+},
+"46": {
+"id": "46",
+"is_snippet": false,
+"next_id": "58",
+"parent_id": "41",
+"type": "goto"
+},
+"48": {
+"id": "48",
+"next_id": "50",
+"text": "girl_3_4",
+"type": "title"
+},
+"5": {
+"id": "5",
+"next_id": "6",
+"next_id_after": "14",
+"responses": PackedStringArray("5", "9"),
+"tags": PackedStringArray(),
+"text": "How long ago did he run away?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "How long ago did he run away?",
+"type": "response"
+},
+"50": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "50",
+"next_id": "51",
+"tags": PackedStringArray(),
+"text": "But it was actually...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "But it was actually...",
+"type": "dialogue"
+},
+"51": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "51",
+"next_id": "52",
+"tags": PackedStringArray(),
+"text": "me.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "me.",
+"type": "dialogue"
+},
+"52": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "52",
+"next_id": "53",
+"tags": PackedStringArray(),
+"text": "It's me. I took mama's coins.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It's me. I took mama's coins.",
+"type": "dialogue"
+},
+"53": {
+"id": "53",
+"next_id": "55",
+"next_id_after": "55",
+"responses": PackedStringArray("53"),
+"tags": PackedStringArray(),
+"text": "Oh it's you.. Why did you do that, sweetie?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Oh it's you.. Why did you do that, sweetie?",
+"type": "response"
+},
+"55": {
+"id": "55",
+"is_snippet": false,
+"next_id": "58",
+"type": "goto"
+},
+"57": {
+"id": "57",
+"next_id": "58",
+"text": "girl_3_5",
+"type": "title"
+},
+"58": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "58",
+"next_id": "59",
+"tags": PackedStringArray(),
+"text": "Because.. I wanted so desperately to get the pink hair ribbon, but my parents refused to buy it for me.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Because.. I wanted so desperately to get the pink hair ribbon, but my parents refused to buy it for me.",
+"type": "dialogue"
+},
+"59": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "59",
+"next_id": "60",
+"tags": PackedStringArray(),
+"text": "Everywhere I looked, all the other girls had these beautiful gadgets that made them feel special.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Everywhere I looked, all the other girls had these beautiful gadgets that made them feel special.",
+"type": "dialogue"
+},
+"6": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "6",
+"next_id": "7",
+"parent_id": "5",
+"tags": PackedStringArray(),
+"text": "I can't recall exactly since he vanished. But it hasn't been very long.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I can't recall exactly since he vanished. But it hasn't been very long.",
+"type": "dialogue"
+},
+"60": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "60",
+"next_id": "61",
+"tags": PackedStringArray(),
+"text": "All I wanted was a simple hair ribbon, but why were my parents so adamant against it?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "All I wanted was a simple hair ribbon, but why were my parents so adamant against it?",
+"type": "dialogue"
+},
+"61": {
+"id": "61",
+"next_id": "62",
+"next_id_after": "81",
+"responses": PackedStringArray("61", "73", "75"),
+"tags": PackedStringArray(),
+"text": "It's lovely",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It's lovely",
+"type": "response"
+},
+"62": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "62",
+"next_id": "63",
+"parent_id": "61",
+"tags": PackedStringArray(),
+"text": "Sounds like you enjoyed it a lot.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Sounds like you enjoyed it a lot.",
+"type": "dialogue"
+},
+"63": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "63",
+"next_id": "64",
+"parent_id": "61",
+"tags": PackedStringArray(),
+"text": "Because it's so pretty.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Because it's so pretty.",
+"type": "dialogue"
+},
+"64": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "64",
+"next_id": "65",
+"parent_id": "61",
+"tags": PackedStringArray(),
+"text": "The young girl's voice is brighter, and she appears to have a great desire to keep discussing the ribbon.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The young girl's voice is brighter, and she appears to have a great desire to keep discussing the ribbon.",
+"type": "dialogue"
+},
+"65": {
+"id": "65",
+"next_id": "66",
+"next_id_after": "81",
+"parent_id": "61",
+"responses": PackedStringArray("65"),
+"tags": PackedStringArray(),
+"text": "The Lord will certainly forgive for such a stunning ribbon.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The Lord will certainly forgive for such a stunning ribbon.",
+"type": "response"
+},
+"66": {
+"id": "66",
+"mutation": {
+"expression": Array[Dictionary]([{
+"type": "variable",
+"value": "value"
+}, {
+"type": "assignment",
+"value": "-="
+}, {
+"type": "number",
+"value": 1
+}])
+},
+"next_id": "67",
+"parent_id": "65",
+"type": "mutation"
+},
+"67": {
+"id": "67",
+"mutation": {
+"expression": Array[Dictionary]([{
+"function": "emit",
+"type": "function",
+"value": Array[Array]([Array[Dictionary]([{
+"type": "string",
+"value": "value_changed"
+}]), Array[Dictionary]([{
+"type": "variable",
+"value": "value"
+}])])
+}])
+},
+"next_id": "68",
+"parent_id": "65",
+"type": "mutation"
+},
+"68": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "68",
+"next_id": "69",
+"parent_id": "65",
+"tags": PackedStringArray(),
+"text": "The young girl giggles.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The young girl giggles.",
+"type": "dialogue"
+},
+"69": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "69",
+"next_id": "70",
+"parent_id": "65",
+"tags": PackedStringArray(),
+"text": "Then, after remembering something else, she becomes quiet again.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Then, after remembering something else, she becomes quiet again.",
+"type": "dialogue"
+},
+"7": {
+"id": "7",
+"next_id": "8",
+"next_id_after": "14",
+"parent_id": "5",
+"responses": PackedStringArray("7"),
+"tags": PackedStringArray(),
+"text": "What happened? Why did he suddenly disappear?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "What happened? Why did he suddenly disappear?",
+"type": "response"
+},
+"70": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "70",
+"next_id": "71",
+"parent_id": "65",
+"tags": PackedStringArray(),
+"text": "But my brother.. I am here for my brother!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "But my brother.. I am here for my brother!",
+"type": "dialogue"
+},
+"71": {
+"id": "71",
+"next_id": "72",
+"next_id_after": "81",
+"parent_id": "65",
+"responses": PackedStringArray("71"),
+"tags": PackedStringArray(),
+"text": "Do you have any idea where your brother might have gone?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Do you have any idea where your brother might have gone?",
+"type": "response"
+},
+"72": {
+"id": "72",
+"is_snippet": false,
+"next_id": "96",
+"parent_id": "71",
+"type": "goto"
+},
+"73": {
+"id": "73",
+"next_id": "74",
+"next_id_after": "81",
+"tags": PackedStringArray(),
+"text": "Is that the pink ribbon you're wearing?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Is that the pink ribbon you're wearing?",
+"type": "response"
+},
+"74": {
+"id": "74",
+"is_snippet": false,
+"next_id": "81",
+"parent_id": "73",
+"type": "goto"
+},
+"75": {
+"id": "75",
+"next_id": "76",
+"next_id_after": "81",
+"tags": PackedStringArray(),
+"text": "That's not a reason to lie.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "That's not a reason to lie.",
+"type": "response"
+},
+"76": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "76",
+"next_id": "77",
+"parent_id": "75",
+"tags": PackedStringArray(),
+"text": "I know I did wrong, but...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I know I did wrong, but...",
+"type": "dialogue"
+},
+"77": {
+"id": "77",
+"is_snippet": false,
+"next_id": "81",
+"parent_id": "75",
+"type": "goto"
+},
+"8": {
+"id": "8",
+"is_snippet": false,
+"next_id": "14",
+"parent_id": "7",
+"type": "goto"
+},
+"80": {
+"id": "80",
+"next_id": "81",
+"text": "girl_3_6",
+"type": "title"
+},
+"81": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "81",
+"next_id": "82",
+"tags": PackedStringArray(),
+"text": "It's stunning, isn't it? This ribbon is the most exquisite one I've ever seen.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It's stunning, isn't it? This ribbon is the most exquisite one I've ever seen.",
+"type": "dialogue"
+},
+"82": {
+"id": "82",
+"next_id": "83",
+"next_id_after": "83",
+"responses": PackedStringArray("82"),
+"tags": PackedStringArray(),
+"text": "Indeed",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Indeed",
+"type": "response"
+},
+"83": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "83",
+"next_id": "84",
+"tags": PackedStringArray(),
+"text": "She appears to have a great desire to keep discussing the ribbon.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "She appears to have a great desire to keep discussing the ribbon.",
+"type": "dialogue"
+},
+"84": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "84",
+"next_id": "85",
+"tags": PackedStringArray(),
+"text": "It's indeed very pretty.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It's indeed very pretty.",
+"type": "dialogue"
+},
+"85": {
+"character": "Me",
+"character_replacements": Array[Dictionary]([]),
+"id": "85",
+"next_id": "86",
+"tags": PackedStringArray(),
+"text": "It's truly lovely. Did your parents catch a glimpse of the ribbon?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "It's truly lovely. Did your parents catch a glimpse of the ribbon?",
+"type": "dialogue"
+},
+"86": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "86",
+"next_id": "87",
+"tags": PackedStringArray(),
+"text": "Um, yeah...",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Um, yeah...",
+"type": "dialogue"
+},
+"87": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "87",
+"next_id": "88",
+"tags": PackedStringArray(),
+"text": "[shake rate=20 level=10]They saw it.[/shake]",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "[shake rate=20 level=10]They saw it.[/shake]",
+"type": "dialogue"
+},
+"88": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "88",
+"next_id": "89",
+"tags": PackedStringArray(),
+"text": "..Did they?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "..Did they?",
+"type": "dialogue"
+},
+"89": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "89",
+"next_id": "90",
+"tags": PackedStringArray(),
+"text": "Nah they didn't. Otherwise, [shake rate=10 level=5]dad[/shake] would have given me the same punishment he gave my brother.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Nah they didn't. Otherwise, [shake rate=10 level=5]dad[/shake] would have given me the same punishment he gave my brother.",
+"type": "dialogue"
+},
+"9": {
+"id": "9",
+"next_id": "10",
+"next_id_after": "14",
+"tags": PackedStringArray(),
+"text": "Call the police, now",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Call the police, now",
+"type": "response"
+},
+"90": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "90",
+"next_id": "91",
+"tags": PackedStringArray(),
+"text": "I need to find him...as soon as possible!!",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "I need to find him...as soon as possible!!",
+"type": "dialogue"
+},
+"91": {
+"id": "91",
+"next_id": "92",
+"next_id_after": "92",
+"responses": PackedStringArray("91"),
+"tags": PackedStringArray(),
+"text": "Do you have any idea where your brother might have gone?",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "Do you have any idea where your brother might have gone?",
+"type": "response"
+},
+"92": {
+"id": "92",
+"is_snippet": false,
+"next_id": "96",
+"type": "goto"
+},
+"95": {
+"id": "95",
+"next_id": "96",
+"text": "girl_3_7",
+"type": "title"
+},
+"96": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "96",
+"next_id": "97",
+"tags": PackedStringArray(),
+"text": "My brother is a fan of the Bakery.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "My brother is a fan of the Bakery.",
+"type": "dialogue"
+},
+"97": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "97",
+"next_id": "98",
+"tags": PackedStringArray(),
+"text": "He goes to the shop on sunny afternoons when he can afford time for leisure.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "He goes to the shop on sunny afternoons when he can afford time for leisure.",
+"type": "dialogue"
+},
+"98": {
+"character": "Young Girl",
+"character_replacements": Array[Dictionary]([]),
+"id": "98",
+"next_id": "99",
+"tags": PackedStringArray(),
+"text": "The bread was so fresh with buttery sweety smells.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "The bread was so fresh with buttery sweety smells.",
+"type": "dialogue"
+},
+"99": {
+"character": "",
+"character_replacements": Array[Dictionary]([]),
+"id": "99",
+"next_id": "100",
+"tags": PackedStringArray(),
+"text": "That bakery is a local favorite; it's quite popular with the youngsters.",
+"text_replacements": Array[Dictionary]([]),
+"translation_key": "That bakery is a local favorite; it's quite popular with the youngsters.",
+"type": "dialogue"
+}
+}
+metadata/dialogue_manager_version = "2.25.1"
